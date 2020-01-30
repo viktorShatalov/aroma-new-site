@@ -1,20 +1,23 @@
-@mixin dspFlex{
-    display:flex;
-} 
-@mixin transition{
-    transition: all 0.3s ease;
+@mixin dspFlex {
+  display: flex;
 }
-@mixin transition-modal{
-    transition: all 0.2s ease-in-out;
+@mixin transition {
+  transition: all 0.5s ease-in;
+}
+@mixin transition-modal {
+  transition: all 0.2s ease-in-out;
 }
 @mixin transform {
 }
-@mixin button_hover{
-    color: $color_white;
-}
-@mixin background {
-}
 @mixin input {
-    padding: 11px;
-    border-radius: 5px;
+  border: 2px solid $color_input-border;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 365px;
+  padding: 18px 0 18px 35px;
+  margin-bottom: 11px;
+  font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  color: #666060;
+  outline: none;
 }

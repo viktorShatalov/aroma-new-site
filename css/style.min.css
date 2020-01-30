@@ -45,6 +45,17 @@ ul li {
   list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #2e2d2f;
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+}
+
+p {
+  letter-spacing: 1.5px;
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -93,8 +104,16 @@ ul li {
 }
 
 .form-input__modal input[type="tel"] {
-  padding: 11px;
+  border: 2px solid #5667e5;
   border-radius: 5px;
+  width: 100%;
+  max-width: 365px;
+  padding: 18px 0 18px 35px;
+  margin-bottom: 11px;
+  font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  color: #666060;
+  outline: none;
   padding: 17px 10px;
   width: 100%;
   max-width: 30%;
@@ -165,6 +184,29 @@ ul li {
   display: flex;
 }
 
+.header__top-row,
+.header__down-row,
+.menu-items {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-row {
+  margin-top: 35px;
+}
+
+.header__content {
+  margin-left: 30px;
+}
+
+.header__top-row,
+.header__down-row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__logo .img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,6 +222,251 @@ ul li {
   background-color: #f1f1f1;
 }
 
+.logo__title {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 11px;
+  color: #767677;
+}
+
+.logo__title p {
+  letter-spacing: 1px;
+}
+
+.menu-items {
+  font-size: 1.125em;
+}
+
+.menu-items li {
+  margin-right: 20px;
+}
+
+.menu-items li a {
+  color: #5e5e60;
+  display: inline-block;
+  letter-spacing: 0.65px;
+}
+
+.menu-items li a::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0%;
+  margin: 5px 0 0;
+  background-color: #787879;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.menu-items li a:hover:after, .menu-items li a:focus:after {
+  width: 100%;
+}
+
+.top__row-phone,
+.top__row-mail {
+  font-size: 1.25em;
+}
+
+.top__row-phone a,
+.top__row-mail a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #202020;
+}
+
+.top__row-phone a img,
+.top__row-mail a img {
+  margin: 0 20px 0 0;
+}
+
+.top__row-phone {
+  margin: 3px -9% 0 0;
+}
+
+.top__row-mail {
+  margin: 3px 3% 0 9%;
+}
+
+.header__btn button {
+  position: relative;
+  border: 2px solid #eac257;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffffff00;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  text-align: center;
+  color: #1a1a1c;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  z-index: 1;
+  margin-left: 30px;
+  width: 266px;
+  height: 51px;
+}
+
+.header__btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #eac257;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  z-index: -1;
+}
+
+.header__btn button:hover::before {
+  width: 100%;
+}
+
+/* info-section */
+.info-block {
+  margin-top: 50px;
+  background: url(../img/main/first-screen/main-bg.jpg) no-repeat;
+  background-position: 20%;
+  width: 100%;
+}
+
+.info-block .conteiner {
+  padding: 77px 5px 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__left {
+  text-align: left;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.info__left h1 {
+  margin-bottom: 15px;
+  font-size: 3.25em;
+}
+
+.info__left p {
+  color: #666060;
+  margin-bottom: 25px;
+  font-size: 1.75em;
+}
+
+.info__left p span {
+  color: #454042;
+}
+
+#form input {
+  border: 2px solid #5667e5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 365px;
+  padding: 18px 0 18px 35px;
+  margin-bottom: 11px;
+  font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  color: #666060;
+  outline: none;
+}
+
+.form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__btn button {
+  position: relative;
+  border: 2px solid #eac257;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffffff00;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  text-align: center;
+  color: #1a1a1c;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  z-index: 1;
+  width: 365px;
+  height: 74px;
+}
+
+.form__btn button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #eac257;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  z-index: -1;
+}
+
+.form__btn button:hover::before {
+  width: 100%;
+}
+
+.info__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  background-color: #4b56bd;
+  border-radius: 50%;
+  width: 565px;
+  height: 565px;
+  position: relative;
+}
+
+.img__item {
+  position: absolute;
+}
+
+.img__item:nth-child(1) {
+  top: -19px;
+  left: 66px;
+  z-index: 1;
+}
+
+.img__item:nth-child(2) {
+  top: -25px;
+  right: 95px;
+}
+
+.img__item:nth-child(3) {
+  bottom: -75px;
+  right: 78px;
+}
+
+.img__item:nth-child(4) {
+  top: -43px;
+  right: -44px;
+}
+
+.img__item:nth-child(5) {
+  bottom: 57px;
+  left: -43px;
+  opacity: 0.7;
+}
+
+/* subMenu-section */
+/* section current offers */
+/* section-newProduct */
+/* section aboutUs */
+/* section formApplication */
+/* section news */
 @media (max-width: 767px) {
   html, body {
     overflow-x: hidden;
@@ -228,8 +515,8 @@ ul li {
     height: 100%;
     background-color: white;
     color: #3d3d3d;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   .mobile-menu.active {
     left: 0;
@@ -250,8 +537,8 @@ ul li {
     width: 100%;
     height: 3px;
     top: 9px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   .burger::before,
   .burger::after {
@@ -261,8 +548,8 @@ ul li {
     width: 100%;
     height: 3px;
     left: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
   }
   .burger::before {
     top: 0;
