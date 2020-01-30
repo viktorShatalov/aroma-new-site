@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aroma-komfort</title>
+    <!-- стили -->
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <button data-close-button class="close-button">&times;</button>
+            <div class="modal-title">
+                <h2>
+                    Перезвоним в течение 15 минут!
+                </h2>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form action="post" class="modal-form">
+                <div class="form-input__modal">
+                    <input type="text" placeholder="Имя">
+                    <input type="tel" placeholder="Телефон">
+                    <input data-close-button type="submit" value="Отправить">
+                </div>
+                <div class="form-modal-description">
+                    <p>
+                        Нажимая кнопку, Вы соглашаетесь c условиями
+                        <a href="#"> политики конфиденциальности.</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
+    <!-- header -->
+    <header class="header">
+        <div class="header-row">
+            <div class="header-row__top">
+                <div class="conteiner">
+                    <div class="top-left">
+                        <div class="payment">
+                            <a href="#">
+                                <p>Доставка и оплата</p>
+                            </a>
+                        </div>
+                        <div class="credit">
+                            <a href="#">
+                                <p>Рассрочка и кредит</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="top-right">
+                        <div class="location">
+                            <p id="user-city">Ваш город</p>
+                        </div>
+                        <div class="phone">
+                            <a href="tel:8 800 505-61-36">
+                                <p>8 800 505-61-36</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-row__down">
+                <div class="conteiner">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/logo-header.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="burger">
+                        <span></span>
+                    </div>
+                    <nav class="header-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Главная</a>
+                            </li>
+                            <li>
+                                <a href="#">Каталог</a>
+                            </li>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="request-call">
+                        <a href="#" data-modal-target="#modal" class="anim_btn effekt">тест-драйв</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main class="main">
+        <!-- section info -->
+        <section class="info-block">
+            <div class="conteiner">
+
+            </div>
+        </section>
+        <!-- section subMenu -->
+        <section class="subMenu">
+            <div class="conteiner">
+
+            </div>
+        </section>
+        <!-- section currentOffers -->
+        <section class="currentOffers">
+            <div class="currentOffers-row conteiner">
+
+            </div>
+        </section>
+        <!-- section newProduct -->
+        <section class="newProduct">
+            <div class="newProduct-row conteiner">
+                <div class="newProduct-content">
+
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- section aboutUs -->
+        <section class="aboutUs">
+            <div class="aboutUs-row conteiner">
+
+            </div>
+        </section>
+        <!-- section formApplication -->
+        <section class="formApplication">
+            <div class="formApplication-row conteiner">
+
+            </div>
+        </section>
+        <!-- section news -->
+        <section class="news">
+            <div class="news-row conteiner">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-row">
+            <div class="conteiner">
+                <div class="footer-row__top">
+                    <div class="footer-logo">
+                        <img src="./img/logo-header.png" alt="footer-logo">
+                    </div>
+                    <div class="top-right">
+                        <div class="location">
+                            <a href="#">
+                                <p id="user-city"></p>
+                            </a>
+                        </div>
+                        <div class="phone">
+                            <a href="tel:8 800 505-61-36">
+                                <p>8 800 505-61-36</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-row__center">
+                    <div class="footer-menu">
+                        
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
