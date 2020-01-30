@@ -1,19 +1,5 @@
-@media (max-width: 768px){
-    .info-block .conteiner{
-        flex-direction: column-reverse;
-    }
-    .info-slider{
-        max-width: 760px;
-        .slider-item img{
-            margin: 0 auto 20px;
-            max-width: 740px;
-        }
-    }
-    .request-call{
-        margin: 15px auto;
-    }
-}
 
+// Tablet *******************************************************************************************
 @media (max-width: 767px){
     html,body{
         overflow-x: hidden;
@@ -21,22 +7,6 @@
     }
     body.lock{
         overflow: hidden;
-    }
-    .header{
-        top: -2px;
-    }
-    .header-row__top,
-    .header-menu,
-    .request-call,
-    .currentOffers-right,
-    .currentOffers-left::before, 
-    .currentOffers-left::after,
-    .footer-row__top .top-right
-    {
-        display: none;
-    }
-    .pagination{
-        font-size: 2.25em;
     }
     .header{
         position: fixed;
@@ -52,10 +22,6 @@
                 }
             }
         }
-    }
-    .cart{
-        left: -100%;
-        top: -10px;
     }
     .form-input__modal input[type="tel"]{
         margin-bottom: 15px;
@@ -75,6 +41,8 @@
     .form-modal-description p{
         font-size: 0.85em;
     }
+
+//  Burger Menu *******************************************************************************************    
     .mobile-menu{
         display: block;
         position: fixed;
@@ -85,51 +53,6 @@
         background-color: $color_white;
         color: $color_text_menu;
         @include transition;
-        a{
-            color: $color_text_menu;
-        }
-        a.anim_btn:link, a.anim_btn:visited{
-            padding: 3% 20%;
-            width: 40%;
-            text-align: center;
-            font-size: 1.125em;
-            margin-top: 20px;
-        }
-        ul{
-            a{
-                display: block;
-                position: relative;
-                padding: 15px 25px;
-                border-top: 1px solid $color_box-shadow;
-            }
-            a:nth-child(6){
-                border-bottom: 1px solid $color_box-shadow;
-            }
-            a:after{
-                content: '>';
-                position: absolute;
-                right: 5%;
-                top: 15%;
-                font-size: 2em;
-                color: $color_box-shadow;
-            }
-            a:nth-child(2)::after{
-                content: '';
-            }
-            a:nth-child(2)::before{
-                content: url(../img/phone-mobile.png);
-                position: absolute;
-                left: 7%;
-            }
-            a:nth-child(1),
-            a:nth-child(2){
-                padding-left: 17%;
-            }
-            #user-city::before{
-                content: url(../img/icon-lication-black.svg);
-                margin: 0 9% 0 -13%;
-            }
-        }
     }
     .mobile-menu.active{
         left: 0;
@@ -179,391 +102,45 @@
         transform:rotate(-45deg);
         bottom:8px
     }
-
-    .info-block{
-        .conteiner{
-            flex-direction: column-reverse;
-            margin: 90px auto 22px;
-            .info-left{
-                flex: 1;
-                margin: 0 auto;
-                width: auto;
-            }
-        }
-    } 
-    .counter-form{
-        margin: 0 auto;
-        input{
-            margin: 0 auto 18px;
-            width: 280px;
-        }
-    }  
-    .counter-form a.anim_btn:link, .counter-form a.anim_btn:visited{
-        padding: 11px 72px 13px;
-        max-width: 147px;
-        width: 100%;
-        margin: 0;
-    }
-    .info-slider{
-        max-width: 300px;
-        margin: 0 auto 25px;
-        .slider-item{
-            img{
-                max-width: 280px;
-            }
-        }
-    }
-    .newProduct-items{
-        max-width: 355px;
-        .item{
-            margin: 0 25px;
-        }
-    }
-    .newProduct-content{
-        padding: 20px 10px;
-        .newProduct__title{
-            h2{
-                margin: 0 auto 33px;
-                text-align: center;
-            }
-        }
-    }  
     .currentOffers{
         .currentOffers-row{
             flex-wrap: wrap;
         }
     } 
-    .currentOffers-left{
-        padding: 20px 10px;
-        margin: 0 auto 30px;
-        .currentOffers-left__title{
-            margin: 0 auto;
-            h2{
-                padding: 0 5px;
-                margin: 0 33px 33px;
-            }
-        }
-    } 
+   
     
-    .currentOffers-slider{
-        max-width: 355px;
-        margin: 0;
-        .slider-item{
-            margin: 0 25px;
-        }
-    }
-    .aboutUs-items{
-        .aboutUs-item{
-            margin: 0 auto 22px;
-        }
-    } 
-    .news-items a{
-        margin: 0 auto 22px;
-    }
-    .formApplication-content{
-        margin: 0 auto 34px;
-    }
-    .news{
-        .news-row{
-            .news-title h2{
-                margin: 0 auto 30px;
-                text-align: center;
-            }
-        }
-    }  
-    .formApplication-content{
-           .content-title{
-               h2{
-                margin: 0 auto 56px;
-                text-align: center;
-               }
-               h2::after{
-                top: 35px;
-                left: 11%;
-                margin: 0 auto;
-            }
-        } 
-    }
-    .form-textarea{
-        textarea{
-            width: 207px;
-        }
-    } 
-    .form-btn a.anim_btn:link, .form-btn a.anim_btn:visited{
-        margin: 0 auto 20px;
-        width: 199px;
-        text-align: center;
-    }
-    .formApplication-right{
-        margin: 0 auto -4px;
-    }
-    .footer-row__top{
-        position: relative;
-        flex-wrap: nowrap;
-        .footer-logo{
-            margin: 0 0 0 7%;
-            img{
-                width: 142px;
-            }
-        }
-    }
-    .footer-row__center{
-        padding: 0 0 35px;
-        .footer-menu{
-            flex-direction: column;
-            padding: 0;
-            .menu-column{
-                margin: 0;
-                border-bottom: 1px solid $color_footer-row;
-                h3{
-                    position: relative;
-                    margin: 15px 7%;
-                }
-                h3::after{
-                    content: url(../img/footer-icon-btn.png);
-                    position: absolute;
-                    right: 0;
-                }
-                ul li{
-                   margin: 0 0 0 7%;
-                }
-            }
-        }
-    }
-    
-    .footer-map{
-        margin: 0 auto;
-        .adress{
-            margin: 0 10%;
-        }
-        p{
-            width: 245px;
-        }
-        .google-map{
-            width: 300px;
-            iframe{
-                height: 215px;
-                width: 360px;
-            }
-        }
-        .top-right{
-            padding: 15px 0 0;
-            .location, .phone{
-                margin: 8px auto 0px;
-            }
-            .phone::before{
-                left: 33px;
-            }
-            #user-city::before{
-                margin-right: 23px;
-            }
-        }
-        .footer-mobile__location{
-            display: block;
-            #user-city{
-                margin: 0 0 0 8%;
-            }
-        }
-    }
-    .menu-column{
-        ul{
-            li{
-                display: none;
-            }
-        }
-    }
-    .content-form{
-        width: 233px;
-    } 
-    .social{
-        p{
-            margin-bottom: 10px;
-            text-align: center;
-        }
-    }
-    // card-product page
+    // card-product page *******************************************************************************
+
     .card-product-row__top{
         flex-wrap: wrap;
     }
-    .card-product__btn{
-        width: 320px;
-        a{
-            margin: 0 auto 20px;
-        }
-        a.anim_btn:link, a.anim_btn:visited{
-            width: 100px;
-        }
-    }
+    
      
-    .card-product__link{
-        text-align: center;
-        a{
-            display: block;
-            margin: 0 auto 10px;
-        }
-    }
-    .description-btn a{
-        margin: 0 auto 33px;
-    }
 
-    // deliveryPage
+    // deliveryPage *************************************************************************************
+
     .breadcumbs{
         margin: 80px 10px 10px;
     }
-    .delivery-row{
-        margin: 20px auto 30px;
-        p{
-            line-height: 20px;
-            font-size: 1.125em;
-        }
-    }
-    .sub-head{
-        margin: 15px 0;
-    }
-    // category page
-    .category-left__sidebar{
-        margin: 0 auto;
-    }
+    
+    
+    // category page ************************************************************************************
+
     .category-row{
         flex-wrap: wrap;
     }
-    .order-product__item{
-        flex: 0 1 100%;
-    }
-    .order-product__name{
-        min-width: 70%;
-    }
-    .categoty-product__item{
-        margin: 0 auto 8%;
-        padding: 2% 8% 0;
-    }
-    .sortBy{
-        text-align: center;
-        p{
-            margin: 0 auto;
-        }
-    }
-    .sidebar-down__btn{
-        a.anim_btn:link, a.anim_btn:visited{
-            width: 125px;
-        }
-   }
+    
+   
 
     // cart-order page
     .cart-order__form-row{
         flex-wrap: wrap;
     }
-    .order-row{
-        padding: 20px 20px 30px;
-    }
-    .order-product{
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-    }
-    .order-product__img{
-        margin-right: 20px;
-    }
-    .order-product__item{
-        flex-wrap: nowrap;
-        margin: 0 0 30px;
-    }
-    .orderForm-btn p{
-        line-height: 16px;
-        text-align: left;
-        padding: 5px 25% 0 0;
-    }
-    #formInput{
-        margin-bottom: 20px;
-        input{
-            width: 95%;
-            max-width: 300px;
-            margin: 0 auto 15px;
-        }
-    } 
     
-    .orderformRadio{
-        @include dspFlex;
-        flex-direction: column;
-        justify-content: left;
-        margin-bottom: 20px;
-        label{
-            margin: 0 0 10px;
-        }
-    }
-    #orderForm-btn{
-        width: 100%;
-    }
-    .cart-order__content{
-        padding: 35px 30px;
-    }
-    .cart-order__content,.cart-order__sidebar{
-        margin:0 auto 30px ;
-    }
-    .order-sidebar__title{
-        margin-bottom: 20px;
-        p{
-            text-align: center;
-        }
-    }
-    .cart-order__sidebar .social{
-        text-align: left;
-        margin-bottom: 20px;
-        max-width: 75%;
-        ul{
-            justify-content: center;
-        }
-    }
-    .order-sidebar__img{
-        text-align: center;
-        img{
-            position: inherit;
-            margin-bottom: -3px;
-        }
-    }
 }
 
-@media (max-width: 414px){
-    .info-block{
-        .conteiner{
-            .info-left{
-                padding: 24px 50px;
-            }
-        }
-    } 
-    .info-slider{
-        margin: 0 auto 25px;
-    }
-}
+// Mobile *******************************************************************************************
+
 @media (max-width: 375px){
-    .info-block{
-        .conteiner{
-            .info-left{
-                padding: 24px 40px;
-            }
-        }
-    }  
-}
-@media (max-width: 360px){
-    .footer-map .top-right .phone::before{
-        left: 27px;
-    }
-}
 
-@media (max-width: 320px){
-    .info-slider{
-        margin: 0 auto 25px;
-    }
-    .footer-map .top-right .phone::before{
-        left: 9px;
-    }
-    .info-block .conteiner .info-left{
-        padding: 24px 15px;
-    }
-    .currentOffers-left{
-        .currentOffers-left__title{
-            h2{
-                margin: 0 0 33px;
-            }
-        }
-    } 
 }

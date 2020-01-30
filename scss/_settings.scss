@@ -1,44 +1,23 @@
 @import '_mixin';
-*{
-    margin: 0 auto;
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
-    font-family:"PT Sans Regular";
-    font-size: 16px;
-    background-color: $color_body;
+    font-family:"Oswald Regular";
+    font-size: 20px;
 }
 .conteiner{
     max-width: $widthContent;
+    margin: 0 auto;
 }
 a{
     text-decoration: none;
-    color: $color_white;
 }
-a.anim_btn:link, a.anim_btn:visited {
-    @include button;
-    @include transition;
-}
-a.anim_btn:link:after, a.anim_btn:visited:after {
-    @include a_after;
-}
-a.anim_btn:link:hover:after, a.anim_btn:visited:hover:after {
-    height: 600%;
-}
-a.anim_btn:link:hover, a.anim_btn:visited:hover{
-    color: $color_white;
-}
-a.anim_btn.effekt:after {
-    @include transform;
-} 
 ul{
     padding: 0;
     li{
         list-style: none;
-        
     }
-}
-#pre{
-    background-color: #111;
-    color: green;
-    padding: 5px;
 }

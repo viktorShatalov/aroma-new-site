@@ -21,7 +21,6 @@
             outline: none;
             font-size: 1.125em;
             color: $color_white;
-            background-color: $color_vanilla;
             border-radius: 5px;
             padding: 5% 19.5%;
             margin: 0 0 10%;
@@ -62,9 +61,6 @@
     a{
         color: $color_text_menu;
         @include transition;
-    }
-    li a:hover{
-        color: $color_vanilla;
     }
     .filtr-items{
         .filtr-item{
@@ -156,7 +152,7 @@
     
 }
 .categoty-product__item:hover .item-description p{
-    color: $color_vanilla;
+  
 }
 .categoty-product__item:hover .item-action a.anim_btn:link{
     color: $color_white;
@@ -223,7 +219,6 @@
     text-align: center;
     font-size: 1.25em;
     margin: 10px auto;
-    color: $color_vanilla;
     .title-line{
         .pagin{
             font-weight: bold;

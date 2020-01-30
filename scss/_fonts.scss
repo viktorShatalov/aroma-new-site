@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'PT Sans Regular';
+    font-family: 'Oswald Regular';
     font-style: normal;
     font-weight: normal;
     font-display: auto;
-    src: url("../fonts/PT_Sans_regular.woff") format("woff"),
-    url("../fonts/PT_Sans_regular.ttf")  format("truetype"),
-    url("../fonts/PT_Sans_regular.otf") format("opentype")   
+    src: url("../fonts/Oswald/woff/Oswald-Regular.woff") format("woff"),
+    url("../fonts/Oswald-Regular.ttf")  format("truetype"),
+    url("../fonts/otf/Oswald-Regular.otf") format("opentype")   
 }
 @font-face {
-    font-family: 'PT Sans Bold';
+    font-family: 'Oswald Bold';
     font-style: normal;
     font-weight: bold;
     font-display: auto;
-    src: url("../fonts/PT_Sans_bold.woff") format("woff"), 
-    url("../fonts/PT_Sans_bold.ttf") format("truetype"), 
-    url("../fonts/PT_Sans_bold.otf") format("opentype"), 
+    src: url("../fonts/woff/Oswald-Bold.woff") format("woff"), 
+    url("../fonts/Oswald-Bold.ttf") format("truetype"), 
+    url("../fonts/otf/Oswald-Bold.otf") format("opentype"), 
 }
   

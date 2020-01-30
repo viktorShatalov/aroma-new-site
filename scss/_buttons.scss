@@ -1,0 +1,14 @@
+@import './mixin';
+@import './variables';
+
+
+@mixin button{
+    border: 2px solid $color_border-btn;
+    border-radius: 5px;
+    width: 266px;
+    height: 51px;
+    outline: none;
+    cursor: pointer;
+    background-color: $color_white;
+    @include transition;
+}

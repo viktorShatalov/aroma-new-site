@@ -1,0 +1,78 @@
+// modal**************************************************
+.modal{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background-color: $color_white;
+    border-radius: 10px;
+    padding: 25px;
+    z-index: 10;
+    width: 825px;
+    max-width: 75%;
+    @include transition-modal;
+}
+.modal-title{
+    h2{
+        margin: 10px 0 40px;
+    }
+}
+.close-button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background:none;
+    border: none;
+    outline: none;
+    font-size: 3em;
+    line-height: 20px;
+}
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+.form-input__modal{
+    @include dspFlex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    input[type="tel"]{
+        @include input;
+        padding: 17px 10px;
+        width: 100%;
+        max-width: 30%;
+    }
+    input::placeholder{
+        font-size: .8em;
+    }
+    input[type="submit"]{
+        color: $color_white;
+        border: none;
+        border-radius: 5px;
+        height: 54px;
+        width: 100%;
+        max-width: 32.5%;
+    }
+}
+.form-modal-description{
+    margin-bottom: 10px;
+    p{
+        font-size: 0.65em;
+        
+    }
+}
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $color_box-shadow;
+    pointer-events: none;
+    z-index: 9;
+    @include transition-modal;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
