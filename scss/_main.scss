@@ -105,20 +105,15 @@
 }
 .advatages-item {
   @include dspFlex;
-  width: 100%;
   max-width: 769px;
   height: 145px;
-  background-color: $color_white;
-  border-radius: 10px;
   margin-bottom: 45px;
   @include boxShadow;
+  @include bacground_white;
   .item__left {
-    position: relative;
-    background-color: rgba(86, 103, 229, 100%);
-    width: 100%;
+    @include bacground_blue;
     max-width: 170px;
     height: 145px;
-    border-radius: 5px;
     .item__right {
       padding: 30px;
     }
@@ -649,20 +644,15 @@
 }
 .ourWork-item {
   @include dspFlex;
-  width: 100%;
+  @include bacground_white;
   max-width: 870px;
   height: 145px;
-  background-color: $color_white;
-  border-radius: 10px;
   margin-bottom: 45px;
   @include boxShadow;
   .item__left {
-    position: relative;
-    background-color: rgba(86, 103, 229, 100%);
-    width: 100%;
+    @include bacground_blue;
     max-width: 170px;
     height: 145px;
-    border-radius: 5px;
   }
   .item__left-img1,
   .item__left-img2,

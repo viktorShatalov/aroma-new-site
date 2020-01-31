@@ -79,3 +79,25 @@
     height: 105%;
   }
 }
+@mixin shopBtn {
+  position: relative;
+  font-size: 0.9em;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid rgba(69, 91, 205, 100%);
+  color: $color_category-sidebar;
+  border-radius: 5px;
+  width: 166px;
+  height: 36px;
+  outline: none;
+  cursor: pointer;
+  &::before {
+    @include button_before;
+    background-color: rgba(64, 84, 186, 100%);
+    top: -1px;
+    height: 105%;
+  }
+  &:hover::before {
+    @include button_before_hover;
+    width: 100%;
+  }
+}
