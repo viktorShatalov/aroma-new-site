@@ -259,6 +259,7 @@
 .serviceType {
   background: url(../img/main/service-type/service-type-bg.jpg) no-repeat center;
   background-size: cover;
+  padding: 1px 0 1px;
   .conteiner {
     margin: 40px auto;
   }
@@ -273,51 +274,9 @@
       margin: 0 5px 25px;
       padding: 15px 5px 0;
       border-radius: 5px;
+      @include transition;
       &:hover {
         background-color: rgb(64, 84, 186);
-      }
-      &:hover .item-img {
-        width: 130px;
-        height: 115px;
-      }
-      &:hover .item-img1 {
-        background: url(../img/main/service-type/service-type-icons/white/picnic.png);
-      }
-      &:hover .item-img2 {
-        background: url(../img/main/service-type/service-type-icons/white/business.png);
-      }
-      &:hover .item-img3 {
-        background: url(../img/main/service-type/service-type-icons/white/car.png);
-      }
-      &:hover .item-img4 {
-        background: url(../img/main/service-type/service-type-icons/white/gym.png);
-      }
-      &:hover .item-img5 {
-        background: url(../img/main/service-type/service-type-icons/white/waiter.png);
-      }
-      &:hover .item-img6 {
-        background: url(../img/main/service-type/service-type-icons/white/dance.png);
-      }
-      &:hover .item-img7 {
-        background: url(../img/main/service-type/service-type-icons/white/cinema.png);
-      }
-      &:hover .item-img8 {
-        background: url(../img/main/service-type/service-type-icons/white/drug.png);
-      }
-      &:hover .item-img9 {
-        background: url(../img/main/service-type/service-type-icons/white/woman.png);
-      }
-      &:hover .item-img10 {
-        background: url(../img/main/service-type/service-type-icons/white/hotel.png);
-      }
-      &:hover .item-img11 {
-        background: url(../img/main/service-type/service-type-icons/white/deal.png);
-      }
-      &:hover .item-img12 {
-        background: url(../img/main/service-type/service-type-icons/white/wine.png);
-      }
-      &:hover .item-img13 {
-        background: url(../img/main/service-type/service-type-icons/white/question.png);
       }
     }
   }
@@ -330,6 +289,7 @@
     background-size: cover;
     width: 130px;
     height: 115px;
+    @include transition;
   }
   .item-img1 {
     background: url(../img/main/service-type/service-type-icons/picnic.png)
@@ -397,6 +357,119 @@
     }
   }
 }
+.serviceType-navigation {
+  ul {
+    li {
+      &:hover .item-img {
+      }
+      &:hover .item-img1 {
+        background: url(../img/main/service-type/service-type-icons/white/picnic.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img2 {
+        background: url(../img/main/service-type/service-type-icons/white/business.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img3 {
+        background: url(../img/main/service-type/service-type-icons/white/car.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img4 {
+        background: url(../img/main/service-type/service-type-icons/white/gym.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img5 {
+        background: url(../img/main/service-type/service-type-icons/white/waiter.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img6 {
+        background: url(../img/main/service-type/service-type-icons/white/dance.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img7 {
+        background: url(../img/main/service-type/service-type-icons/white/cinema.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img8 {
+        background: url(../img/main/service-type/service-type-icons/white/drug.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img9 {
+        background: url(../img/main/service-type/service-type-icons/white/woman.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img10 {
+        background: url(../img/main/service-type/service-type-icons/white/hotel.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img11 {
+        background: url(../img/main/service-type/service-type-icons/white/deal.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img12 {
+        background: url(../img/main/service-type/service-type-icons/white/wine.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+      &:hover .item-img13 {
+        background: url(../img/main/service-type/service-type-icons/white/question.png)
+          no-repeat center;
+        width: 130px;
+        height: 115px;
+        background-size: contain;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
 /* section try */
 .try {
   background: url(../img/main/service-type/service-type-bg.jpg) no-repeat center;

@@ -19,6 +19,15 @@
 }
 .header__content {
   margin-left: 30px;
+  .logo__title {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 11px;
+    color: #767677;
+    p{
+      letter-spacing: 1px;
+    }
+  }
 }
 .header__top-row,
 .header__down-row {
@@ -32,15 +41,6 @@
     width: 170px;
     height: 125px;
     background-color: $color_logo;
-  }
-}
-.logo__title {
-  font-size: 2em;
-  margin-top: 10px;
-  margin-bottom: 11px;
-  color: #767677;
-  p{
-    letter-spacing: 1px;
   }
 }
 .menu-items {
