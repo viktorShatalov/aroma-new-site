@@ -135,3 +135,19 @@ $('.sidebar-filtr').ready(function () {
 
 // let counts = document.querySelectorAll(".order-product__count");
 // counts.forEach(addHandlers);
+
+// $(window).scroll(function (event) {
+//   var top = $(window).scrollTop();
+//    if(top >= 20){
+//    //show btn
+//    } else {
+//    //hide btn
+//    }
+// });
+
+// jQuery(document).ready(function() {
+//   jQuery('.post').addClass("hidden").viewportChecker({
+//       classToAdd: 'visible animated fadeIn',
+//       offset: 100
+//      });
+// });

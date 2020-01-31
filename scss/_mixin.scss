@@ -21,3 +21,6 @@
   color: #666060;
   outline: none;
 }
+@mixin boxShadow {
+  box-shadow: 0px 0px 133px 0px rgba(37, 25, 2, 0.33);
+}

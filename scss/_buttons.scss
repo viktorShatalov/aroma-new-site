@@ -17,7 +17,7 @@
   &::before {
     @include button_before;
   }
-  &:hover::before{
+  &:hover::before {
     @include button_before_hover;
   }
 }
@@ -27,12 +27,55 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0%;
   height: 100%;
   background: $color_border-btn;
   @include transition;
   z-index: -1;
 }
 @mixin button_before_hover {
-  width: 100%;
+  width: 101%;
+}
+
+@mixin button_link {
+  position: relative;
+  border: 3px solid rgba(248, 195, 77, 100%);
+  border-radius: 5px;
+  width: 264px;
+  padding: 11px 18px;
+  background-color: #ffffff00;
+  font-size: 1.25em;
+  color: rgba(95, 95, 96, 100%);
+  text-align-last: left;
+  cursor: pointer;
+  outline: none;
+  &::after {
+    content: "->";
+    color: rgba(95, 95, 96, 100%);
+    margin: 0 0 0 10px;
+  }
+  &::before {
+    @include button_before;
+    height: 103%;
+    top: -1px;
+  }
+  &:hover::before {
+    @include button_before_hover;
+  }
+}
+
+@mixin movie_btn {
+  position: relative;
+  border: 3px solid rgba(64, 84, 186, 100%);
+  border-radius: 5px;
+  width: 264px;
+  height: 41px;
+  background-color: #ffffff00;
+  outline: none;
+  &::before {
+    @include button_before;
+    background-color: rgba(64, 84, 186, 100%);
+    top: -1px;
+    height: 105%;
+  }
 }
