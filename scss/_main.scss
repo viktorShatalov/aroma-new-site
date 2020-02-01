@@ -275,6 +275,7 @@
       padding: 15px 5px 0;
       border-radius: 5px;
       @include transition;
+      cursor: pointer;
       &:hover {
         background-color: rgb(64, 84, 186);
       }
@@ -474,6 +475,9 @@
   background: url(../img/main/service-type/service-type-bg.jpg) no-repeat center;
   background-size: cover;
   padding: 80px 0;
+  display: none;
+  @include transition;
+  transform: translateX(100%);
 }
 .try__content {
   @include dspFlex;
@@ -551,9 +555,9 @@
 .movie__btn36 {
   button {
     @include movie_btn;
-    &:hover::before {
-      width: 36%;
-    }
+    // &:hover::before {
+    //   width: 36%;
+    // }
   }
 }
 .movie__btn20 {

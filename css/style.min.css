@@ -294,7 +294,7 @@ h2 {
 
 .header__btn button {
   position: relative;
-  border: 2px solid #eac257;
+  border: 3px solid #eac257;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -325,7 +325,7 @@ h2 {
 }
 
 .header__btn button:hover::before {
-  width: 101%;
+  width: 100%;
 }
 
 /* info-section */
@@ -390,7 +390,7 @@ h2 {
 
 .form__btn button {
   position: relative;
-  border: 2px solid #eac257;
+  border: 3px solid #eac257;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -420,7 +420,7 @@ h2 {
 }
 
 .form__btn button:hover::before {
-  width: 101%;
+  width: 100%;
 }
 
 .info__right {
@@ -720,6 +720,7 @@ h2 {
   border-radius: 5px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .serviceType-navigation ul li:hover {
@@ -918,6 +919,11 @@ h2 {
   background: url(../img/main/service-type/service-type-bg.jpg) no-repeat center;
   background-size: cover;
   padding: 80px 0;
+  display: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .try__content {
@@ -1043,7 +1049,7 @@ h2 {
 }
 
 .moreDetails__btn button:hover::before {
-  width: 101%;
+  width: 100%;
 }
 
 .movie__btn36 button {
@@ -1070,10 +1076,6 @@ h2 {
   background-color: #4054ba;
   top: -1px;
   height: 105%;
-}
-
-.movie__btn36 button:hover::before {
-  width: 36%;
 }
 
 .movie__btn20 button {
@@ -1662,7 +1664,7 @@ h2 {
 }
 
 .categoty-product__item .item-action .item-action__btn button:hover::before {
-  width: 101%;
+  width: 100%;
   width: 100%;
 }
 

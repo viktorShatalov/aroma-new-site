@@ -3,7 +3,7 @@
 
 @mixin button {
   position: relative;
-  border: 2px solid $color_border-btn;
+  border: 3px solid $color_border-btn;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -34,7 +34,7 @@
   z-index: -1;
 }
 @mixin button_before_hover {
-  width: 101%;
+  width: 100%;
 }
 
 @mixin button_link {

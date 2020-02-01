@@ -1,9 +1,9 @@
 // menu -mobile
 
-$(document).ready(function () {
-  $('.burger').click(function () {
-    $('.burger,.mobile-menu').toggleClass('active');
-    $('body').toggleClass('lock');
+jQuery(document).ready(function () {
+  jQuery('.burger').click(function () {
+    jQuery('.burger,.mobile-menu').toggleClass('active');
+    jQuery('body').toggleClass('lock');
   })
 })
 
@@ -50,104 +50,62 @@ function modal() {
 }
 modal();
 
-// footer sub-menu
+// paralax-effect
 
-if ($(window).width() > 768) {
-  // Тут код для больших разрешений,
-  //с шириной окна с сайтом больше 768 писелей
-} else {
-  // Тут код для маленьких экранов
-  $(".menu-column ul li").hide();
-
-  $(".menu-column h3").click(
-    function () {
-      $(".menu-column ul li").toggle('slow')
+function Parallax(options) {
+  options = options || {};
+  this.nameSpaces = {
+    wrapper: options.wrapper || 'body',
+    layers: options.layers || '.parallax-layer',
+    deep: options.deep || 'data-parallax-deep'
+  };
+  this.init = function () {
+    let self = this,
+      parallaxWrappers = document.querySelectorAll(this.nameSpaces.wrapper);
+    for (let i = 0; i < parallaxWrappers.length; i++) {
+      (function (i) {
+        parallaxWrappers[i].addEventListener('mousemove', function (e) {
+          let x = e.clientX,
+            y = e.clientY,
+            layers = parallaxWrappers[i].querySelectorAll(self.nameSpaces.layers);
+          for (let j = 0; j < layers.length; j++) {
+            (function (j) {
+              let deep = layers[j].getAttribute(self.nameSpaces.deep),
+                disallow = layers[j].getAttribute('data-parallax-disallow'),
+                itemX = (disallow && disallow === 'x') ? 0 : x / deep,
+                itemY = (disallow && disallow === 'y') ? 0 : y / deep;
+              if (disallow && disallow === 'both') return;
+              layers[j].style.transform = 'translateX(' + itemX + '%) translateY(' + itemY + '%)';
+            })(j);
+          }
+        })
+      })(i);
     }
-  );
-
-  // categoryPage sidebar-filtr
-
-  $(".sidebar-filtr").hide();
-
-  $(".sidebar-help__btn button").click(
-    function () {
-      $(".sidebar-filtr").toggle('slow')
-    }
-  );
-
+  };
+  this.init();
+  return this;
 }
 
-// card ptoduct description TABS
-
-$('.btn').click(function () {
-  var id = $(this).attr('data-tab'),
-    content = $('.specifications__block[data-tab="' + id + '"]');
-
-  $('.btn.active').removeClass('active');
-  $(this).addClass('active');
-
-  $('.specifications__block.active').removeClass('active');
-  content.addClass('active');
+window.addEventListener('load', function () {
+  new Parallax();
 });
 
-// сортировка по цене на странице category
+// hidden block
 
-$('#category__sortBy').ready(function () {
-  $("#down-price").hide();
+jQuery(document).ready(function () {
+  jQuery('.serviceType-navigation ul li').click(function () {
+    jQuery('.try').css({
+      "transform": "translateX(0)",
+      "display": "block",
+    });
+  })
+})
 
-  $('#img-sort').on('click', function () {
-    $("#down-price").toggle('slow');
-  });
+// 
+$(window).scroll(function () {
+  let st = $(this).scrollTop();
+  if ($(this).scrollTop() > 4000) {
+    $(".movie__btn36 button::before").css("width", "36%");
+  }
+  console.log(st)
 });
-
-// categoryPage filtr
-
-$('.sidebar-filtr').ready(function () {
-  $(".filtr-item__sub").hide();
-
-  $('.filtr-item').click(function () {
-    $(this).children(".filtr-item__sub").stop(true, true).toggle('slow');
-  });
-});
-
-// счетчик количества товара cart-page
-
-// function addHandlers(count) {
-
-//   let minus = count.querySelector("#btnMinus");
-//   let number = count.querySelector("#product-input");
-//   let plus = count.querySelector("#btnPlus");
-
-//   plus.addEventListener("click", function () {
-//     +number.value++;
-//     if (number.value >= 1) {
-//       minus.disabled = false;
-//     }
-//   });
-
-//   minus.addEventListener("click", function () {
-//     +number.value--;
-//     if (number.value == 1) {
-//       minus.disabled = true;
-//     }
-//   });
-// }
-
-// let counts = document.querySelectorAll(".order-product__count");
-// counts.forEach(addHandlers);
-
-// $(window).scroll(function (event) {
-//   var top = $(window).scrollTop();
-//    if(top >= 20){
-//    //show btn
-//    } else {
-//    //hide btn
-//    }
-// });
-
-// jQuery(document).ready(function() {
-//   jQuery('.post').addClass("hidden").viewportChecker({
-//       classToAdd: 'visible animated fadeIn',
-//       offset: 100
-//      });
-// });
