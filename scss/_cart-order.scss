@@ -1,93 +1,139 @@
-// ection cart-order
-.order-row{
-    margin: 30px 0;
-    padding: 25px 75px 25px 40px;
-    p{
-    }
-    strong{
-        color: black;
-    }
+// section cart-order
+$color__titleNane: rgba(189, 189, 190, 1);
+$color__del: rgba(150, 150, 151, 1);
+$color__productName: rgba(95, 95, 96, 1);
+
+.order-product__mobile {
+  display: none;
 }
-.order-product__item{
-    flex: 0 1 60%;
+.oreder-title {
+  h1 {
+    font-size: 1.75em;
+    margin: 45px 0 30px;
+  }
+}
+.title__name {
+  ul {
     @include dspFlex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    flex-wrap: nowrap;
-}
-.oreder-title{
-    h2{
-        margin: 0px 0px 35px;
+    margin-bottom: 30px;
+    li {
+      color: $color__titleNane;
+      font-size: 1.25em;
+      flex: 0 1 100px;
+      &:nth-child(1) {
+        flex: 0 1 280px;
+      }
     }
+  }
 }
-.order-product{
-    @include dspFlex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-    flex-wrap: nowrap;
+.order-product,
+.order-product__flex1,
+.order-product__flex2 {
+  @include dspFlex;
+  align-items: center;
 }
-.order-product__img{
-    margin: 0;
-    img{
-        width: 100%;
-        max-width: 60px;
-        height: 60px;
-    }
+.order-product__flex1 {
+  flex: 0 1 55%;
 }
-.order-product__name{
-    width: 100%;
-    max-width: 60%;
-    p{
-        font-size: 1.25em;
-    }
+.order-product__flex2 {
 }
-.order-product__count{
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
-    padding: 6px 11px;
-    input{
-        width: 20px;
-        font-size: 1.125em;
-        height: 20px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background-color: $color_white;
-    }
-    &:hover{
-    }
-}
-#product-input{
-    padding: 0 0 0 9px;
-    color: rgba(0,0,0,1);
-}
-.order-product__price{
+.order-product__name {
+  flex: 1 0 280px;
+  h3 {
+    color: $color__productName;
     font-size: 1.25em;
-    margin: 0 25px;
+  }
 }
-.order-product__del{
-    button{
-        border: none;
-        outline: none;
-        background-color: $color_white;
-        cursor: pointer;
-        width: 62px;
-        height: 50px;
-        padding: 0;
-    }
+.order-product__price {
+  p {
+    color: $color__productName;
+    font-size: 1.25em;
+  }
 }
-.order-product__orderSum{
-    border-radius: 5px;
-    padding: 10px 30px 10px 10px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 180px;
-    text-align: end;
-    margin-right: 0;
-    p{  
-        font-size: 1.25em;
-        line-height: 25px;
+.order-product__price,
+.order-product__count {
+  flex: 1 1 90px;
+}
+.order-product__img {
+  flex: 1 0 200px;
+  text-align: center;
+}
+.order-product__count {
+  input[type="text"] {
+    border: 2px solid rgba(69, 91, 205, 1);
+    width: 66px;
+    height: 58px;
+    text-align: center;
+    color: $color__titleNane;
+  }
+}
+.order-product__del {
+  position: relative;
+  cursor: pointer;
+  width: 145px;
+  height: 55px;
+  span {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 55px;
+    border: 1px solid $color__del;
+    transform: rotate(-46deg);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 53px;
+      border: 1px solid $color__del;
+      transform: rotate(90deg);
     }
+  }
+}
+.order-product__img {
+  img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+  }
+}
+.order-product__sum {
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+#sum {
+  margin-bottom: 35px;
+  p {
+    font-size: 1.5em;
+  }
+}
+#cartForm {
+  @include dspFlex;
+  flex-wrap: wrap;
+  input[type="tel"] {
+    border: 2px solid rgba(69, 91, 205, 1);
+    border-radius: 4px;
+    width: 366px;
+    height: 58px;
+    outline: none;
+    padding: 16px 30px;
+    font-size: 1.25em;
+    color: $color__productName;
+    margin-right: 30px;
+  }
+  input[type="submit"] {
+    border-radius: 8px;
+    background-color: rgba(248, 195, 77, 1);
+    width: 270px;
+    height: 58px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.25em;
+    text-align: center;
+    color: #131316;
+    &:hover {
+      background-color: rgba(248, 195, 77, 0.8);
+    }
+  }
 }

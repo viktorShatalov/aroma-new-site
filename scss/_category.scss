@@ -180,9 +180,11 @@
       @include transition;
     }
     p {
-      font-size: 0.75em;
-      letter-spacing: 0.4px;
-      color: rgba(145, 145, 146, 100%);
+      a {
+        font-size: 0.75em;
+        letter-spacing: 0.4px;
+        color: rgba(145, 145, 146, 100%);
+      }
     }
   }
   .item-action {

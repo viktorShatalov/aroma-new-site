@@ -5,195 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ramford</title>
+    <title>Aroma-komfort</title>
     <!-- стили -->
-    <link rel="icon" type="image/png" href="img/icon-kamin.png">
-    <link rel="stylesheet" href="js/slick/slick.css">
-    <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <!-- скрипт определения города -->
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
-        type="text/javascript"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            $("#user-city,#user-city2").text(ymaps.geolocation.city);
-            $('.unswer a').click(function () {
-                $('.question').toggleClass('active');
-            });
-        }
-    </script>
 </head>
 
 <body>
-    <!-- arthboard modal -->
-    <div class="modal__arthboard" id="modal__arthboard">
-        <button data-close-button class="close-button">&times;</button>
-        <div class="modal-header">
-            <div class="modal-title">
-                <h2>
-                    Уже уходите?
-                </h2>
-                <p>
-                    Поможем подобрать правильный камин. <br> Всего 10 минут и Вы узнаете какой камин подойдет именно
-                    Вам!
-                </p>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form action="post" class="modal-form__arthboard">
-                <div class="form-input__modal">
-                    <input type="tel" placeholder="Телефон">
-                    <div class="social">
-                        <label><input type="radio" checked name="social">По телефону</label>
-                        <label><input type="radio" name="social">В whats'ap, VIber и т.д.</label>
-                    </div>
-                    <input data-close-button type="button" value="Отправить">
-                </div>
-                <div class="form-modal-description">
-                    <p>
-                        Нажимая кнопку, Вы соглашаетесь c условиями
-                        <a href="#"> политики конфиденциальности.</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="overlay"></div>
-
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-            <button data-close-button class="close-button">&times;</button>
-            <div class="modal-title">
-                <h2>
-                    Перезвоним в течение 15 минут!
-                </h2>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form action="post" class="modal-form">
-                <div class="form-input__modal">
-                    <input type="text" placeholder="Имя">
-                    <input type="tel" placeholder="Телефон">
-                    <input data-close-button type="button" value="Отправить">
-                </div>
-                <div class="form-modal-description">
-                    <p>
-                        Нажимая кнопку, Вы соглашаетесь c условиями
-                        <a href="#"> политики конфиденциальности.</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="overlay"></div>
 
     <!-- header -->
     <header class="header">
-        <div class="header-row">
-            <div class="header-row__top">
-                <div class="conteiner">
-                    <div class="top-left">
-                        <div class="payment">
-                            <a href="#">
-                                <p>Доставка и оплата</p>
-                            </a>
+        <div class="conteiner">
+            <div class="header-row">
+                <div class="header__logo">
+                    <!-- <img src="" alt="header-logo"> -->
+                    <a href="#">
+                        <div class="img">
+                            <p>лого</p>
                         </div>
-                        <div class="credit">
-                            <a href="#">
-                                <p>Рассрочка и кредит</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top-right">
-                        <div class="location">
-                            <p id="user-city"></p>
-                            <p class="question">
-                                Ваш город
-                                <span id="user-city2"></span>
-                                ?
-                                <span class="unswer">
-                                    <a href="#">Да</a>
-                                    <a href="#">Нет</a>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:8 800 505-61-36">
-                                <p>8 800 505-61-36</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-row__down">
-                <div class="conteiner">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="img/logo-header.png" alt="ramford-logo">
-                        </a>
-                    </div>
-                    <nav class="header-menu">
-                        <ul>
-                            <li>
-                                <a href="#">Главная</a>
-                            </li>
-                            <li>
-                                <a href="#">Каталог</a>
-                            </li>
-                            <li>
-                                <a href="#">О нас</a>
-                            </li>
-                            <li>
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    </a>
                     <div class="burger">
                         <span></span>
                     </div>
-                    <nav class="mobile-menu">
-                        <ul>
-                            <a href="#">
-                                <li>
-                                    <div class="location__mobile">
-                                        <p id="user-city"></p>
-                                    </div>
-                                </li>
+                </div>
+                <div class="header__content">
+                    <div class="header__top-row">
+                        <div class="logo__title">
+                            <p>Aroma-komfort</p>
+                        </div>
+                        <div class="top__row-phone">
+                            <a href="tel:+7 (968) 712-15-45">
+                                <img src="img/main/header-icons/phone.jpg" alt="icon-phone">
+                                <p>+7 (968) 712-15-45</p>
                             </a>
-                            <a href="tel:8 800 505-61-36">
-                                <li>
-                                    <div class="phone__mobile">
-                                        <p>8 800 505-61-36</p>
-                                    </div>
-                                </li>
+                        </div>
+                        <div class="top__row-mail">
+                            <a href="mailto:info@aroma-komfort.ru">
+                                <img src="img/main/header-icons/mail.jpg" alt="icon-mail">
+                                <p>info@aroma-komfort.ru</p>
                             </a>
-                            <a href="#">
-                                <li>Главная</li>
-                            </a>
-                            <a href="#">
-                                <li>Каталог</li>
-                            </a>
-                            <a href="#">
-                                <li>О нас </li>
-                            </a>
-                            <a href="#">
-                                <li>Контакты</li>
-                            </a>
-                            <div class="request-call__mobile">
-                                <a href="#" data-modal-target="#modal" class="anim_btn effekt">Заказать звонок</a>
-                            </div>
-                        </ul>
-                    </nav>
-                    <div class="request-call">
-                        <a href="#" data-modal-target="#modal" class="anim_btn effekt">Заказать звонок</a>
+                        </div>
                     </div>
-                    <div class="cart">
-                        <a href="#">
-                            <img src="img/shopping-cart.png" alt="ramford-cart">
-                        </a>
-                        <p><span>0</span></p>
+                    <div class="header__down-row">
+                        <nav class="header-menu">
+                            <ul class="menu-items">
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="#">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#">О Компании</a>
+                                </li>
+                                <li>
+                                    <a href="#">Наши Клиенты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Доставка</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__btn">
+                            <button>ТЕСТ-ДРАЙВ</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,143 +80,139 @@
 
     <!-- main content -->
     <main class="main">
-        <!-- section delivery -->
+        <!-- section ourWork -->
         <section class="delivery">
             <div class="conteiner">
-                <div class="breadcumbs">
-                    <ul>
-                        <li>
-                            <a href="#">Ramford</a>
-                        </li>
-                        <li>
-                            <a href="">&gt;</a>
-                        </li>
-                        <li>
-                            <a href="#">Доставка и оплата</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="delivery-row">
-                    <div class="delivery-title">
-                        <h2>
-                            Осуществляем доставку каминов по всей России!
-                        </h2>
-                    </div>
-                    <div class="delivery-content">
-                        <p class="sub-head">
-                            <strong>
-                                Сроки и стоимость доставки
-                            </strong>
-                        </p>
-                        <p>
-                            <strong>Доставка по Москве </strong>производится в течение 3-х дней после заказа на сайте,
-                            если заказан товар
-                            со склада в Москве (из наличия).<br>
-                            <strong>Доставка до Екатеринбурга </strong>составляет 3-7 рабочих дней после заказа на
-                            сайте.<br>
-                            Стоимость доставки по России зависит от отдаленности населенного пункта.<br>
-                            Уточнить стоимость доставки в определенный населенный пункт Вы можете по телефону
-                            контактного центра <strong>8-800-505-61-36</strong>.<br>
-                            <span>Срок изготовления электрокаминов на заказ</span> 7-10 дней + срок доставки.<br>
-                            Доставка осуществляется транспортными компаниями: …….
-                        </p>
-                        <p class="sub-head">
-                            <strong>
-                                Способы оплаты товара
-                            </strong>
-                        </p>
-                        <p>
-                            Оплата за товар и услугу доставки возможна следующими способами:<br>
-                            - онлайн на сайте в момент оформления заказа;<br>
-                            - наличными при получении.<br>
-                            При оформлении заказа на юридическое лицо стоимость доставки включается в счет на оплату.
-                        </p>
-                    </div>
+                <div class="delivery__title">
+                    <h2>Доставка</h2>
                 </div>
             </div>
         </section>
-
-        <!-- section aboutUs -->
-        <section class="aboutUs">
-            <div class="aboutUs-row conteiner">
-                <div class="aboutUs-items">
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Более 1000
-                            </h2>
-                            <p>товаров в магазине</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                С 2014 года
-                            </h2>
-                            <p>дарим тепло и уют</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Гарантия
-                            </h2>
-                            <p>Официальная гарантия</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Оплата
-                            </h2>
-                            <p>Любые способы</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- section ourWork -->
+        <section class="ourWork">
+            <div class="ourWork__title conteiner">
+                <h2>Как мы работаем</h2>
             </div>
-        </section>
-        <!-- section formApplication -->
-        <section class="formApplication">
-            <div class="formApplication-row conteiner">
-                <div class="formApplication-content">
-                    <div class="content-title">
-                        <h2>Всегда рады помочь</h2>
-                    </div>
-                    <form class="content-form">
-                        <div class="form-input">
-                            <input type="text" name="name" placeholder="Имя*">
-                            <input type="tel" name="phone" placeholder="Телефон*">
-                        </div>
-                        <div class="form-textarea">
-                            <textarea name="textarea" placeholder="Вопрос"></textarea>
-                        </div>
-                        <div class="form-btn">
-                            <a href="#" class="anim_btn effekt">Получить консультацию</a>
-                            <div class="social">
-                                <p>Мы онлайн в месенджерах:</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Whats'ap
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Viber
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            Telegram
-                                        </a>
-                                    </li>
-                                </ul>
+            <div class="conteiner">
+                <div class="ourWork__content">
+                    <div class="ourWork__content-items">
+                        <div class="ourWork-item">
+                            <div class="item__left">
+                                <div class="item__left-img1">
+                                    <img src="img/main/works/letter.png" alt="ourWork-img">
+                                </div>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__right-description">
+                                    <h3>
+                                        1
+                                    </h3>
+                                    <p>
+                                        Оставьте заявку или закажите продукт
+                                        в каталоге
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                        <div class="ourWork-item">
+                            <div class="item__left">
+                                <div class="item__left-img2">
+                                    <img src="img/main/works/car.png" alt="ourWork-img">
+                                </div>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__right-description">
+                                    <h3>
+                                        2
+                                    </h3>
+                                    <p>
+                                        Курьер доставит заказ до вас
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ourWork-item">
+                            <div class="item__left">
+                                <div class="item__left-img3">
+                                    <img src="img/main/works/equipment.png" alt="ourWork-img">
+                                </div>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__right-description">
+                                    <h3>
+                                        3
+                                    </h3>
+                                    <p>
+                                        Профессионал установит<br> арома-оборудование
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ourWork-item">
+                            <div class="item__left">
+                                <div class="item__left-img4">
+                                    <img src="img/main/works/key.png" alt="ourWork-img">
+                                </div>
+                            </div>
+                            <div class="item__right">
+                                <div class="item__right-description">
+                                    <h3>
+                                        4
+                                    </h3>
+                                    <p>
+                                        Мы бесплатно обслуживаем<br>
+                                        и заменяем старые ароматы
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="formApplication-right">
-                    <img src="img/mobile.png" alt="mobile-form">
+                <div class="ourWork__img parallax">
+                    <img data-parallax-deep="270" class="parallax-layer" src="img//main/works/1.png"
+                        alt="ourWork-baloon">
+                </div>
+            </div>
+        </section>
+        <!-- section info-block__duble -->
+        <section class="info-block__duble">
+            <div class="conteiner">
+                <div class="info__left">
+                    <div class="left__title">
+                        <h2>
+                            Вызвать парфюмера
+                        </h2>
+                        <p>
+                            Наш парфюмер поможет<br>
+                            определиться с ароматом
+                        </p>
+                        <p>
+                            <span>7 дней бесплатного тест-драйва</span>
+                        </p>
+                    </div>
+                    <div class="info__form">
+                        <form id="form">
+                            <div class="form__input">
+                                <input type="text" placeholder="Имя">
+                                <input type="tel" placeholder="Телефон">
+                            </div>
+                            <div class="form__btn">
+                                <button>Попробовать ТЕСТ-ДРАЙВ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="info__right parallax">
+                    <img data-parallax-deep="270" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-1.png" alt="baloon">
+                    <img data-parallax-deep="380" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-2.png" alt="baloon">
+                    <img data-parallax-deep="300" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-3.png" alt="baloon">
+                    <img data-parallax-deep="100" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-4.png" alt="baloon">
+                    <img data-parallax-deep="110" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-5.png" alt="baloon">
                 </div>
             </div>
         </section>
@@ -348,116 +222,93 @@
     <footer class="footer">
         <div class="footer-row">
             <div class="conteiner">
-                <div class="footer-row__top">
-                    <div class="footer-logo">
-                        <img src="./img/logo-header.png" alt="footer-logo">
-                    </div>
-                    <div class="top-right">
-                        <div class="location">
-                            <a href="#">
-                                <p id="user-city"></p>
-                            </a>
+                <div class="footer__items">
+                    <div class="footer__item">
+                        <div class="footer__logo">
+                            <div class="header__logo">
+                                <!-- <img src="" alt="header-logo"> -->
+                                <a href="#">
+                                    <div class="img">
+                                        <p>лого</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="logo__title">
+                                <h2>Aroma-komfort</h2>
+                                <p>Аромамаркетинг</p>
+                            </div>
                         </div>
-                        <div class="phone">
-                            <a href="tel:8 800 505-61-36">
-                                <p>8 800 505-61-36</p>
-                            </a>
+                        <div class="footer__infoBlock">
+                            <p>
+                                Основное направление нашей деятельности - продажа профессионального оборудования для
+                                ароматизации, а также оказание сопутствующих услуг (помощь в выборе ароматов, монтаж
+                                распылителей и иных приборов, постсервис и ремонт техники). Обслуживаем помещения всех
+                                типов и размеров.
+                            </p>
+                            <p>
+                                Мы заботимся как о наших клиентах, так и об аудитории заказчиков. Этическая задача
+                                «Арома Комфорт» состоит в том, чтобы поставлять на российский рынок экологически
+                                безопасные ароматизаторы для сенсорного маркетинга, в основе которых лежат натуральные
+                                компоненты.
+                            </p>
+                            <p>
+                                Кто становится нашими клиентами? Чаще всего к нам обращаются владельцы ресторанов и
+                                кафе, организаций и офисов, складов и супермаркетов, бутиков<br> и гостиниц.
+                                Сотрудничаем с
+                                кинозалами, представителей транспортной и развлекательной индустрии, а также со всеми,
+                                чей доход напрямую зависит от количества потенциальных покупателей или заказчиков.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="footer-row__center">
-                    <div class="footer-menu">
-                        <nav class="menu-column">
-                            <h3>Каталог</h3>
-                            <ul>
+                    <div class="footer__item">
+                        <nav class="footer-menu">
+                            <ul class="menu-items">
                                 <li>
-                                    <a href="#">Электрокамины</a>
+                                    <a href="#">О Компании</a>
                                 </li>
                                 <li>
-                                    <a href="#">Камины</a>
+                                    <a href="#">Наши Клиенты</a>
                                 </li>
                                 <li>
-                                    <a href="#">Порталы</a>
+                                    <a href="#">Доставка и оплата</a>
                                 </li>
                                 <li>
-                                    <a href="#">Электроочаги</a>
+                                    <a href="#">Условия соглашения</a>
                                 </li>
                                 <li>
-                                    <a href="#">Печи для дома</a>
-                                </li>
-                                <li>
-                                    <a href="#">Печи для бань</a>
-                                </li>
-                                <li>
-                                    <a href="#">Аксессуары</a>
-                                </li>
-                                <li>
-                                    <a href="#">Монтаж</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <nav class="menu-column">
-                            <h3>Меню</h3>
-                            <ul>
-                                <li>
-                                    <a href="#"> Главная</a>
+                                    <a href="#">Политика конф</a>
                                 </li>
                                 <li>
                                     <a href="#">Каталог</a>
-                                </li>
-                                <li>
-                                    <a href="#">О нас</a>
                                 </li>
                                 <li>
                                     <a href="#">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="menu-column">
-                            <h3>Покупателям</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">Доставка и оплата</a>
-                                </li>
-                                <li>
-                                    <a href="#">Рассрочка и кредит</a>
-                                </li>
-                                <li>
-                                    <a href="#">Гарантии</a>
-                                </li>
-                                <li>
-                                    <a href="#">Возврат</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="footer-map">
-                            <div class="footer-mobile__location">
-                                <div class="top-right">
-                                    <div class="location">
-                                        <a href="#">
-                                            <p id="user-city"></p>
-                                        </a>
-                                    </div>
-                                    <div class="phone">
-                                        <a href="tel:8 800 505-61-36">
-                                            <p>8 800 505-61-36</p>
-                                        </a>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__contact">
+                            <div class="footer__row-phone">
+                                <a href="tel:+7 (968) 712-15-45">
+                                    <p>+7 (968) 712-15-45</p>
+                                </a>
                             </div>
-                            <p class="adress">20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
-                            <div class="google-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.1872172822946!2d60.50571731544358!3d56.877032912191936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c171d2669ab0a9%3A0x4a61dba8dc1b026f!2z0YPQuy4g0KDQsNGB0YLQvtGH0L3QsNGPLCAxNS80LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDA1MA!5e0!3m2!1sru!2sua!4v1579179829322!5m2!1sru!2sua"
-                                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="">
-                                </iframe>
+                            <div class="footer__row-mail">
+                                <a href="mailto:info@aroma-komfort.ru">
+                                    <p>info@aroma-komfort.ru</p>
+                                </a>
+                            </div>
+                            <div class="footer__siteName">
+                                <a href="/">Aroma-komfort.ru</a>
+                            </div>
+                            <div class="footer__privacyPolicy">
+                                <a href="#">Политика кониденциальности</a>
+                            </div>
+                            <div class="footer__img">
+                                <img src="img/main/footer/footer-baloon.png" alt="aroma-komfort">
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="footer-row__down">
-                    <div class="footer-signature">
-                        <p>2014-2019 Компания РАМФОРД</p>
                     </div>
                 </div>
             </div>
@@ -465,8 +316,6 @@
     </footer>
 
     <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/jquery/jquery.cookies.js"></script>
-    <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

@@ -24,7 +24,7 @@
     margin-top: 10px;
     margin-bottom: 11px;
     color: #767677;
-    p{
+    p {
       letter-spacing: 1px;
     }
   }
@@ -61,7 +61,8 @@
         @include transition;
       }
       &:hover:after,
-      &:focus:after {
+      &:focus:after,
+      &:active {
         width: 100%;
       }
     }
@@ -78,7 +79,7 @@
     }
   }
 }
-.top__row-phone{
+.top__row-phone {
   margin: 3px -9% 0 0;
 }
 .top__row-mail {
