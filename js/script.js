@@ -101,11 +101,10 @@ jQuery(document).ready(function () {
   })
 })
 
-// 
+// show width
 $(window).scroll(function () {
-  let st = $(this).scrollTop();
-  if ($(this).scrollTop() > 4000) {
+  if ($(window).scrollTop() > 0) {
     $(".movie__btn36 button::before").css("width", "36%");
   }
-  console.log(st)
 });
+
