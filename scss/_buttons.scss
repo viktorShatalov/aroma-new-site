@@ -1,6 +1,7 @@
 @import "./mixin";
 @import "./variables";
 
+// анимация всех кнопок на главной
 @keyframes changeWidthBtn {
   50% {
     background-color: $color_border-btn;
@@ -10,7 +11,18 @@
     background-color: $color_border-btnWith;
   }
 }
+// анимация кнопки в категориях
+@keyframes changeWidthBtnShop {
+  50% {
+    background-color: rgba(64, 84, 186, 1);
+  }
+  100% {
+    width: 100.5%;
+    background-color: rgba(64, 84, 186, 0.8);
+  }
+}
 
+// кнопка на главной
 @mixin button {
   position: relative;
   border: 3px solid $color_border-btn;
@@ -49,6 +61,7 @@
   animation: changeWidthBtn 0.5s forwards;
 }
 
+// кнопка на главной в блоке ourSuccess
 @mixin button_link {
   position: relative;
   border: 3px solid $color_border-btn;
@@ -74,6 +87,7 @@
   }
 }
 
+// кнопка в категории ourSuccess для появления анимации при скроле
 @mixin movie_btn {
   position: relative;
   border: 3px solid rgba(64, 84, 186, 100%);
@@ -90,6 +104,8 @@
     @include transition;
   }
 }
+
+// кнопка в категориях
 @mixin shopBtn {
   position: relative;
   font-size: 0.9em;
@@ -101,14 +117,18 @@
   height: 36px;
   outline: none;
   cursor: pointer;
+  @include transition;
+  &:hover {
+    border: 2px solid rgba(69, 91, 205, .75);
+  }
   &::before {
     @include button_before;
     background-color: rgba(64, 84, 186, 100%);
+    background: rgba(64, 84, 186, 100%);
     top: -1px;
     height: 105%;
   }
   &:hover::before {
-    @include button_before_hover;
-    width: 100%;
+    animation: changeWidthBtnShop 0.5s forwards;
   }
 }

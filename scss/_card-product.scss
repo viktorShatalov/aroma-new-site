@@ -1,188 +1,120 @@
-.card-product-row__top{
-    @include background;
-    @include dspFlex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 20px 33px 20px;
-    margin: 0 auto 35px;
-    .card-product__left{
-        flex: 0 1 28%;
-        margin: 0;
-        .card-product-img{
-            ul{
-                @include dspFlex;
-                margin-top: 10px;
-                li{
-                    border: 1px solid $color_box-shadow;
-                    border-radius: 5px;
-                    padding: 5px;
-                    margin: 0 5px;
-                    a img{
-                        width: 55px;
-                        height: 55px;
-                    }
-                }
-            }
-        }
+$color__grey: rgba(145, 145, 146, 1);
+$color__headeingPrice: rgba(19, 19, 22, 1);
+$color__btn_product: rgba(248, 195, 77, 1);
+
+.card-product__item {
+  @include dspFlex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.card-product__img {
+  width: 570px;
+  height: 570px;
+  @include boxShadow_product;
+  padding: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.card-product__description {
+  width: 270px;
+  .price__product {
+    font-size: 1.25em;
+    color: $color__headeingPrice;
+  }
+  p {
+    color: $color__grey;
+    font-size: 1.1em;
+    line-height: 2;
+    letter-spacing: 0;
+  }
+  h3 {
+    font-size: 1.6em;
+    color: $color__headeingPrice;
+    letter-spacing: 0.5px;
+  }
+}
+#cardProduct {
+  @include dspFlex;
+  flex-direction: column;
+  input[type="number"] {
+    font-size: 0.7em;
+    margin-bottom: 15px;
+    width: 166px;
+    height: 36px;
+    border-width: 2px;
+    border-radius: 5px;
+    border: 2px solid rgba(69, 91, 205, 1);
+    padding: 15px 10px;
+  }
+  input[type="submit"] {
+    font-size: 1.25em;
+    width: 270px;
+    height: 54px;
+    border-radius: 7px;
+    background-color: $color__btn_product;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include transition;
+    &:hover {
+      background-color: rgba(248, 195, 77, 0.8);
     }
-    .card-product-right{
-        flex: 0 1 50%;
-        margin: 0;
+  }
+}
+.card-product__about {
+  max-width: 550px;
+  margin-bottom: 35px;
+  p {
+    color: rgba(95, 95, 96, 1);
+    font-size: 0.9em;
+    text-align: left;
+    line-height: 1.556;
+    letter-spacing: 0px;
+    padding: 0 10px;
+  }
+}
+.card-product__similar {
+  .similar__title {
+    h3 {
+      margin-bottom: 20px;
+      color: $color__grey;
     }
+  }
 }
-.card-product-name{
-    .product-name__title{
-        h2{
-            font-weight: normal;
-            font-size: 1.5625em;
-            margin: 30px 0 10px;
-            line-height: 32px;
-        }
-        p{
-            @include dspFlex;
-            margin: 0 0 25px;
-            .in-stock,
-            .not-in-stock{
-                display: none;
-            }
-           .in-stock.active{
-              color: $color_green;
-              display: block;  
-              margin: 0;
-           } 
-           .not-in-stock.active{
-               color: $color_danger;
-               display: block;
-               margin: 0;
-           }
-        }
+.similar__items {
+  @include dspFlex;
+  flex-wrap: wrap;
+}
+.similar__item {
+  width: 300px;
+  padding: 10px;
+  @include transition;
+  &:hover {
+    @include boxShadow_product;
+  }
+  img {
+    width: 270px;
+    height: 270px;
+  }
+  .item__title {
+    color: $color__headeingPrice;
+    h4 {
+      letter-spacing: 0.3px;
+      font-weight: bold;
     }
-    
-}
-.product-name__delivery{
-    color: $color_burger-menu;
-    margin: 0 30px;
-}
-.product-name__price{
-    margin: 0 0 35px;
-    p{
-        font-size: 2.188em;
-        span{
-            color: $color_burger-menu;
-            font-weight: bolder;
-        }
+    p {
+      line-height: 2;
+      font-size: 0.8em;
+      color: #5f5f60;
+      font-weight: bold;
+      strong {
+        font-size: 1.125rem;
+        color: $color__headeingPrice;
+      }
     }
-}
-.card-product__btn{
-    margin-bottom: 30px;
-    @include dspFlex;
-    flex-wrap: nowrap;
-    a{
-        width: 100%;
-        max-width: 90px;
-        background-color: $color_white;
-        border: 1px solid rgba(177,177,177,100%);
-        border-radius: 5px;
-        padding: 8px 10px;
-        @include transition;
-        cursor: pointer;
-        font-size: 1.125em;
-        text-align: center;
-        display: block;
-        color: $color_text_menu;
-        margin: 0;
-    }
-    .nc_msput,
-    .item-action__btn{
-        margin: 0 10% 0 0;
-    }
-}
-.card-product__link{
-    a{
-        color: $color_burger-menu;
-        margin-right: 25px;
-        font-size: 1.125em;
-    }
-    a:hover{
-        color: $color_vanilla;
-    }
-}
-.description-btn{
-    @include dspFlex;
-    a{
-        @include background;
-        background-color: $color_body;
-        padding: 22px 19px;
-        color: $color_signature;
-        font-size: 1.125em;
-        display: block;
-        width: 100%;
-        height: 100%;
-        max-width: 127px;
-        margin: 0 13px 33px 0;
-        cursor: pointer;
-        text-align: center;
-    }
-    a.active{
-        color: $color_vanilla;
-        background-color: $color_white;
-    }
-}
-.description-content{
-    @include background;
-    padding: 40px 33px 45px;
-    margin: 0 0 55px;
-    ul{
-        padding: 0;
-        margin: 0;
-        li{
-            @include dspFlex;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 11px;
-        }
-    }
-}
-.specifications__block,
-.specifications__block{
-    display: none;
-}
-.specifications__block.active,
-.specifications__block.active{
-    display: block;
-}
-.description__name{
-    display: inline-block;
-    position: relative;
-}
-.description__name::after{
-    content: '';
-    position: absolute;
-    left: 107%;
-    right: -9999px;
-    bottom: 0;
-    top: 0;
-    border-bottom: 1px dotted #888;
-}
-.description__left{
-    width: 55%;
-    overflow: hidden;
-    margin: 0;
-}
-.description__quantity{
-    width: 30%;
-    color: $color_card-description;
-    margin: 0;
-}
-.description-content__title{
-    h2{
-        padding: 15px 0 30px;
-    }
-}
-.description-content__text{
-    p{
-        padding: 5px;
-        font-size: 1.125em;
-        line-height: 25px;
-    }
+  }
 }

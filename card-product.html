@@ -1,481 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ramford</title>
+    <title>Aroma-komfort</title>
     <!-- стили -->
-    <link rel="icon" type="image/png" href="img/icon-kamin.png">
-    <link rel="stylesheet" href="js/slick/slick.css">
-    <link rel="stylesheet" href="js/slick/slick-theme.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <!-- скрипт определения города -->
-    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"
-        type="text/javascript"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            $("#user-city,#user-city2").text(ymaps.geolocation.city);
-            $('.unswer a').click(function () {
-                $('.question').toggleClass('active');
-            });
-        }
-    </script>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
 </head>
 
 <body>
-    <!-- arthboard modal -->
-    <div class="modal__arthboard" id="modal__arthboard">
-        <button data-close-button class="close-button">&times;</button>
-        <div class="modal-header">
-            <div class="modal-title">
-                <h2>
-                    Уже уходите?
-                </h2>
-                <p>
-                    Поможем подобрать правильный камин. <br> Всего 10 минут и Вы узнаете какой камин подойдет именно
-                    Вам!
-                </p>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form action="post" class="modal-form__arthboard">
-                <div class="form-input__modal">
-                    <input type="tel" placeholder="Телефон">
-                    <div class="social">
-                        <label><input type="radio" checked name="social">По телефону</label>
-                        <label><input type="radio" name="social">В whats'ap, VIber и т.д.</label>
-                    </div>
-                    <input data-close-button type="button" value="Отправить">
-                </div>
-                <div class="form-modal-description">
-                    <p>
-                        Нажимая кнопку, Вы соглашаетесь c условиями
-                        <a href="#"> политики конфиденциальности.</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="overlay"></div>
-
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-            <button data-close-button class="close-button">&times;</button>
-            <div class="modal-title">
-                <h2>
-                    Перезвоним в течение 15 минут!
-                </h2>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form action="post" class="modal-form">
-                <div class="form-input__modal">
-                    <input type="text" placeholder="Имя">
-                    <input type="tel" placeholder="Телефон">
-                    <input data-close-button type="button" value="Отправить">
-                </div>
-                <div class="form-modal-description">
-                    <p>
-                        Нажимая кнопку, Вы соглашаетесь c условиями
-                        <a href="#"> политики конфиденциальности.</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="overlay"></div>
-
     <!-- header -->
     <header class="header">
-        <div class="header-row">
-            <div class="header-row__top">
-                <div class="conteiner">
-                    <div class="top-left">
-                        <div class="payment">
-                            <a href="#">
-                                <p>Доставка и оплата</p>
-                            </a>
+        <div class="conteiner">
+            <div class="header-row">
+                <div class="header__logo">
+                    <!-- <img src="" alt="header-logo"> -->
+                    <a href="#">
+                        <div class="img">
+                            <p>лого</p>
                         </div>
-                        <div class="credit">
-                            <a href="#">
-                                <p>Рассрочка и кредит</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="top-right">
-                        <div class="location">
-                            <p id="user-city"></p>
-                            <p class="question">
-                                Ваш город
-                                <span id="user-city2"></span>
-                                ?
-                                <span class="unswer">
-                                    <a href="#">Да</a>
-                                    <a href="#">Нет</a>
-                                </span>
-                            </p>
-                        </div>
-                        <div class="phone">
-                            <a href="tel:8 800 505-61-36">
-                                <p>8 800 505-61-36</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-row__down">
-                <div class="conteiner">
-                    <div class="logo">
-                        <a href="#">
-                            <img src="img/logo-header.png" alt="ramford-logo">
-                        </a>
-                    </div>
-                    <nav class="header-menu">
-                        <ul>
-                            <li>
-                                <a href="#">Главная</a>
-                            </li>
-                            <li>
-                                <a href="#">Каталог</a>
-                            </li>
-                            <li>
-                                <a href="#">О нас</a>
-                            </li>
-                            <li>
-                                <a href="#">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    </a>
                     <div class="burger">
                         <span></span>
                     </div>
-                    <nav class="mobile-menu">
-                        <ul>
-                            <a href="#">
-                                <li>
-                                    <div class="location__mobile">
-                                        <p id="user-city"></p>
-                                    </div>
-                                </li>
+                </div>
+                <div class="header__content">
+                    <div class="header__top-row">
+                        <div class="logo__title">
+                            <p>Aroma-komfort</p>
+                        </div>
+                        <div class="top__row-phone">
+                            <a href="tel:+7 (968) 712-15-45">
+                                <img src="img/main/header-icons/phone.jpg" alt="icon-phone">
+                                <p>+7 (968) 712-15-45</p>
                             </a>
-                            <a href="tel:8 800 505-61-36">
-                                <li>
-                                    <div class="phone__mobile">
-                                        <p>8 800 505-61-36</p>
-                                    </div>
-                                </li>
+                        </div>
+                        <div class="top__row-mail">
+                            <a href="mailto:info@aroma-komfort.ru">
+                                <img src="img/main/header-icons/mail.jpg" alt="icon-mail">
+                                <p>info@aroma-komfort.ru</p>
                             </a>
-                            <a href="#">
-                                <li>Главная</li>
-                            </a>
-                            <a href="#">
-                                <li>Каталог</li>
-                            </a>
-                            <a href="#">
-                                <li>О нас </li>
-                            </a>
-                            <a href="#">
-                                <li>Контакты</li>
-                            </a>
-                            <div class="request-call__mobile">
-                                <a href="#" data-modal-target="#modal" class="anim_btn effekt">Заказать звонок</a>
-                            </div>
-                        </ul>
-                    </nav>
-                    <div class="request-call">
-                        <a href="#" data-modal-target="#modal" class="anim_btn effekt">Заказать звонок</a>
+                        </div>
                     </div>
-                    <div class="cart">
-                        <a href="#">
-                            <img src="img/shopping-cart.png" alt="ramford-cart">
-                        </a>
-                        <p><span>0</span></p>
+                    <div class="header__down-row">
+                        <nav class="header-menu">
+                            <ul class="menu-items">
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="#">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#">О Компании</a>
+                                </li>
+                                <li>
+                                    <a href="#">Наши Клиенты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Доставка</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__btn">
+                            <button>ТЕСТ-ДРАЙВ</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
+
     <!-- main content -->
     <main class="main">
         <!-- section card-product -->
         <section class="card-product">
             <div class="conteiner">
-                <div class="breadcumbs">
-                    <ul>
-                        <li>
-                            <a href="#">Ramford</a>
-                        </li>
-                        <li>
-                            <a href="">&gt;</a>
-                        </li>
-                        <li>
-                            <a href="#">Каталог</a>
-                        </li>
-                        <li>
-                            <a href="">&gt;</a>
-                        </li>
-                        <li>
-                            <a href="#">Электрокамины</a>
-                        </li>
-                        <li>
-                            <a href="">&gt;</a>
-                        </li>
-                        <li>
-                            <a href="#">С 3D пламенем</a>
-                        </li>
-                        <li>
-                            <a href="">&gt;</a>
-                        </li>
-                        <li>
-                            <a href="#">Dimplex Портал Pierre Luxe</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-product-row__top">
-                    <div class="card-product__left">
-                        <div class="card-product-img">
-                            <a href="#">
-                                <img src="img/card_image.png" alt="img">
-                            </a>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/Dublin_arochnyy_skal_nyy_s_Cavendish.png" alt="img">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/barselona_ao_FS33_ir_s.png" alt="img">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/Pierre_Luxe_shampan____panoramic_25.png" alt="img">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="img/card_image.png" alt="img">
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card-product-right">
-                        <div class="card-product-name">
-                            <div class="product-name__title">
-                                <h2>
-                                    Dimplex Портал Pierre Luxe (шампань) с очагом Opti-Myst Cavendish
-                                </h2>
-                                <p>
-                                    <span class="in-stock active">Есть на складе</span>
-                                    <span class="not-in-stock">Нет на складе</span>
-                                    <span class="product-name__delivery">Доставка по РФ</span>
-                                </p>
+                <div class="category__row">
+                    <div class="category-left__sidebar">
+                        <div class="category-sidebar">
+                            <div class="sidebar__title">
+                                <p>Категории</p>
                             </div>
-                            <div class="product-name__price">
-                                <p>
-                                    <strong>129 590</strong>
-                                    <span>₽</span>
-                                </p>
-                            </div>
-                            <div class="card-product__btn">
-                                <a class="active" href="#">Купить</a>
-                                <a href="#">Купить в кредит</a>
-                            </div>
-                            <div class="card-product__link">
-                                <a href="#">
-                                    Официальныя гарантия 12 месяцев
-                                </a>
-                                <a data-modal-target="#modal" href="#">
-                                    Помощь с выбором
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section  card-product__specifications -->
-        <section class="specifications">
-            <div class="conteiner">
-                <div class="specifications-row">
-                    <div class="description-btn">
-                        <a class="btn active" data-tab="1">Описание</a>
-                        <a class="btn" data-tab="2">Характеристики</a>
-                    </div>
-                    <div class="specifications__block active" data-tab="1">
-                        <div class="description-content">
-                            <div class="description-content__title">
-                                <h2>
-                                    Описание товара
-                                </h2>
-                            </div>
-                            <div class="description-content__text">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi cumque autem
-                                    repudiandae quam corrupti, laudantium atque nesciunt temporibus a. Ab minus maxime
-                                    aliquam reprehenderit sit quod sapiente id? Assumenda?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="specifications__block" data-tab="2">
-                        <div class="description-content">
-                            <ul>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Габариты</span>
-                                    </div>
-                                    <span class="description__quantity">1190&times;1010&times;420 мм</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Цвет портала</span>
-                                    </div>
-                                    <span class="description__quantity">темный дуб/дуб/венге</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Цвет экрана/камня</span>
-                                    </div>
-                                    <span class="description__quantity">шампань</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Материалы</span>
-                                    </div>
-                                    <span class="description__quantity">камень/MDF/Натуральный шпон</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Очаг</span>
-                                    </div>
-                                    <span class="description__quantity">Cavendish серии Opti-Myst</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Тип очага</span>
-                                    </div>
-                                    <span class="description__quantity">С эффектом живого пламени</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Контроль интенсивности дыма</span>
-                                    </div>
-                                    <span class="description__quantity">есть</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Мощность обогрева</span>
-                                    </div>
-                                    <span class="description__quantity">2 кВт</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Пульт Д/У</span>
-                                    </div>
-                                    <span class="description__quantity">есть</span>
-                                </li>
-                                <li>
-                                    <div class="description__left">
-                                        <span class="description__name">Гарантия</span>
-                                    </div>
-                                    <span class="description__quantity">1 год</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section aboutUs -->
-        <section class="aboutUs">
-            <div class="aboutUs-row conteiner">
-                <div class="aboutUs-items">
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Более 1000
-                            </h2>
-                            <p>товаров в магазине</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                С 2014 года
-                            </h2>
-                            <p>дарим тепло и уют</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Гарантия
-                            </h2>
-                            <p>Официальная гарантия</p>
-                        </div>
-                    </div>
-                    <div class="aboutUs-item">
-                        <div class="aboutUs-description">
-                            <h2>
-                                Оплата
-                            </h2>
-                            <p>Любые способы</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- section formApplication -->
-        <section class="formApplication">
-            <div class="formApplication-row conteiner">
-                <div class="formApplication-content">
-                    <div class="content-title">
-                        <h2>Всегда рады помочь</h2>
-                    </div>
-                    <form class="content-form">
-                        <div class="form-input">
-                            <input type="text" name="name" placeholder="Имя*">
-                            <input type="tel" name="phone" placeholder="Телефон*">
-                        </div>
-                        <div class="form-textarea">
-                            <textarea name="textarea" placeholder="Вопрос"></textarea>
-                        </div>
-                        <div class="form-btn">
-                            <a href="#" class="anim_btn effekt">Получить консультацию</a>
-                            <div class="social">
-                                <p>Мы онлайн в месенджерах:</p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            Whats'ap
-                                        </a>
+                            <div class="sidebar-filtr">
+                                <ul class="filtr-items">
+                                    <li class="filtr-item">
+                                        <a href="#">Аэрозольные ароматы</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Viber
-                                        </a>
+                                    <li class="filtr-item">
+                                        <a href="#">Автомобильные</a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            Telegram
-                                        </a>
+                                    <li class="filtr-item">
+                                        <a href="#">Анти-запах</a>
+                                    </li>
+                                    <li class="filtr-item">
+                                        <a href="#">Диффузионные ароматы</a>
+                                    </li>
+                                    <li class="filtr-item">
+                                        <a href="#">Жидкостные</a>
+                                    </li>
+                                    <li class="filtr-item">
+                                        <a href="#">Оборудование</a>
+                                    </li>
+                                    <li class="filtr-item">
+                                        <a href="#">Репелент</a>
+                                    </li>
+                                    <li class="filtr-item">
+                                        <a href="#">Средства дезинфекции</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="category-content">
+                        <div class="sortBy">
+                            <form action="" id="formSearh">
+                                <p>Поиск</p>
+                                <input type="text" placeholder="Введите запрос">
+                                <input type="submit" value="">
+                            </form>
+                            <div id="cart">
+                                <p>Корзина</p>
+                                <div class="cart__img">
+                                    <img src="img/shop/shopping-cart.png" alt="cart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-product__content">
+                            <div class="card-product__item">
+                                <div class="card-product__img">
+                                    <img src="img/shop/Original.png" alt="original-aromat">
+                                </div>
+                                <div class="card-product__description">
+                                    <p>
+                                        Аэрозольный аромат
+                                    </p>
+                                    <h3 class="name__product">
+                                        Натуральный манго
+                                    </h3>
+                                    <p class="price__product">
+                                        <strong>
+                                            Цена:
+                                            <span>1300</span>
+                                        </strong>
+                                    </p>
+                                    <p><strong>Объём: </strong>250 мл</p>
+                                    <p><strong>Производитель: </strong>Mega Systems</p>
+                                    <p><strong>Модель: </strong>Фруктовый «Original Mango»</p>
+                                    <form action="" id="cardProduct">
+                                        <input type="number" id="product" placeholder="Кол-во">
+                                        <input type="submit" value="В корзину">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-product__about">
+                                <p>
+                                    «Натуральный манго» - тонизирующий летний аромат свежевыжатого сока натурального
+                                    манго. Подходит для помещений ярких расцветок, которые возвращают нас в лето. Пусть
+                                    воображение при помощи освежителя воздуха “Натуральный манго” унесет вас в теплые
+                                    страны на берегу моря, нарисует ласковый прибой, вечнозеленые пальмы на пляже и
+                                    загадочные джунгли на горизонте. Окунитесь в волны теплого океана, наслаждаясь
+                                    запахом натурального манго — экзотического фрукта родом из индийских тропиков.
+                                    Представьте, солнечные ласковые лучи согревают вас, а манговые деревья вокруг
+                                    увешаны множеством душистых плодов. Даже зимой запах «Натуральный манго» согреет и
+                                    навеет приятные воспоминания об летней поездке на юг.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-product__similar">
+                            <div class="similar__title">
+                                <h3>
+                                    Похожие ароматы:
+                                </h3>
+                            </div>
+                            <div class="similar__items">
+                                <div class="similar__item">
+                                    <img src="img/shop/Original.png" alt="riginal-aromat">
+                                    <div class="item__title">
+                                        <h4>
+                                            Натуральный манго
+                                        </h4>
+                                        <p><strong>Цена: <span>1300</span></strong></p>
+                                        <p>Объём: <span>250 мл</span></p>
+                                    </div>
+                                </div>
+                                <div class="similar__item">
+                                    <img src="img/shop/Original.png" alt="riginal-aromat">
+                                    <div class="item__title">
+                                        <strong>
+                                            <h4>
+                                                Натуральный манго
+                                            </h4>
+                                        </strong>
+                                        <p><strong>Цена: <span>1300</span></strong></p>
+                                        <p>Объём: <span>250 мл</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="formApplication-right">
-                    <img src="img/mobile.png" alt="mobile-form">
+            </div>
+        </section>
+
+        <!-- section info-block__duble -->
+        <section class="info-block__duble">
+            <div class="conteiner">
+                <div class="info__left">
+                    <div class="left__title">
+                        <h2>
+                            Вызвать парфюмера
+                        </h2>
+                        <p>
+                            Наш парфюмер поможет<br>
+                            определиться с ароматом
+                        </p>
+                        <p>
+                            <span>7 дней бесплатного тест-драйва</span>
+                        </p>
+                    </div>
+                    <div class="info__form">
+                        <form id="form">
+                            <div class="form__input">
+                                <input type="text" placeholder="Имя">
+                                <input type="tel" placeholder="Телефон">
+                            </div>
+                            <div class="form__btn">
+                                <button>Попробовать ТЕСТ-ДРАЙВ</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="info__right parallax">
+                    <img data-parallax-deep="270" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-1.png" alt="baloon">
+                    <img data-parallax-deep="380" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-2.png" alt="baloon">
+                    <img data-parallax-deep="300" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-3.png" alt="baloon">
+                    <img data-parallax-deep="100" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-4.png" alt="baloon">
+                    <img data-parallax-deep="110" class="img__item parallax-layer"
+                        src="img/main/first-screen/baloon-5.png" alt="baloon">
                 </div>
             </div>
         </section>
@@ -485,116 +260,93 @@
     <footer class="footer">
         <div class="footer-row">
             <div class="conteiner">
-                <div class="footer-row__top">
-                    <div class="footer-logo">
-                        <img src="./img/logo-header.png" alt="footer-logo">
-                    </div>
-                    <div class="top-right">
-                        <div class="location">
-                            <a href="#">
-                                <p id="user-city"></p>
-                            </a>
+                <div class="footer__items">
+                    <div class="footer__item">
+                        <div class="footer__logo">
+                            <div class="header__logo">
+                                <!-- <img src="" alt="header-logo"> -->
+                                <a href="#">
+                                    <div class="img">
+                                        <p>лого</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="logo__title">
+                                <h2>Aroma-komfort</h2>
+                                <p>Аромамаркетинг</p>
+                            </div>
                         </div>
-                        <div class="phone">
-                            <a href="tel:8 800 505-61-36">
-                                <p>8 800 505-61-36</p>
-                            </a>
+                        <div class="footer__infoBlock">
+                            <p>
+                                Основное направление нашей деятельности - продажа профессионального оборудования для
+                                ароматизации, а также оказание сопутствующих услуг (помощь в выборе ароматов, монтаж
+                                распылителей и иных приборов, постсервис и ремонт техники). Обслуживаем помещения всех
+                                типов и размеров.
+                            </p>
+                            <p>
+                                Мы заботимся как о наших клиентах, так и об аудитории заказчиков. Этическая задача
+                                «Арома Комфорт» состоит в том, чтобы поставлять на российский рынок экологически
+                                безопасные ароматизаторы для сенсорного маркетинга, в основе которых лежат натуральные
+                                компоненты.
+                            </p>
+                            <p>
+                                Кто становится нашими клиентами? Чаще всего к нам обращаются владельцы ресторанов и
+                                кафе, организаций и офисов, складов и супермаркетов, бутиков<br> и гостиниц.
+                                Сотрудничаем с
+                                кинозалами, представителей транспортной и развлекательной индустрии, а также со всеми,
+                                чей доход напрямую зависит от количества потенциальных покупателей или заказчиков.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="footer-row__center">
-                    <div class="footer-menu">
-                        <nav class="menu-column">
-                            <h3>Каталог</h3>
-                            <ul>
+                    <div class="footer__item">
+                        <nav class="footer-menu">
+                            <ul class="menu-items">
                                 <li>
-                                    <a href="#">Электрокамины</a>
+                                    <a href="#">О Компании</a>
                                 </li>
                                 <li>
-                                    <a href="#">Камины</a>
+                                    <a href="#">Наши Клиенты</a>
                                 </li>
                                 <li>
-                                    <a href="#">Порталы</a>
+                                    <a href="#">Доставка и оплата</a>
                                 </li>
                                 <li>
-                                    <a href="#">Электроочаги</a>
+                                    <a href="#">Условия соглашения</a>
                                 </li>
                                 <li>
-                                    <a href="#">Печи для дома</a>
-                                </li>
-                                <li>
-                                    <a href="#">Печи для бань</a>
-                                </li>
-                                <li>
-                                    <a href="#">Аксессуары</a>
-                                </li>
-                                <li>
-                                    <a href="#">Монтаж</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <nav class="menu-column">
-                            <h3>Меню</h3>
-                            <ul>
-                                <li>
-                                    <a href="#"> Главная</a>
+                                    <a href="#">Политика конф</a>
                                 </li>
                                 <li>
                                     <a href="#">Каталог</a>
-                                </li>
-                                <li>
-                                    <a href="#">О нас</a>
                                 </li>
                                 <li>
                                     <a href="#">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="menu-column">
-                            <h3>Покупателям</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">Доставка и оплата</a>
-                                </li>
-                                <li>
-                                    <a href="#">Рассрочка и кредит</a>
-                                </li>
-                                <li>
-                                    <a href="#">Гарантии</a>
-                                </li>
-                                <li>
-                                    <a href="#">Возврат</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div class="footer-map">
-                            <div class="footer-mobile__location">
-                                <div class="top-right">
-                                    <div class="location">
-                                        <a href="#">
-                                            <p id="user-city"></p>
-                                        </a>
-                                    </div>
-                                    <div class="phone">
-                                        <a href="tel:8 800 505-61-36">
-                                            <p>8 800 505-61-36</p>
-                                        </a>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="footer__item">
+                        <div class="footer__contact">
+                            <div class="footer__row-phone">
+                                <a href="tel:+7 (968) 712-15-45">
+                                    <p>+7 (968) 712-15-45</p>
+                                </a>
                             </div>
-                            <p class="adress">20050, Екатеринбург, ул. Расточная, 15/4-17 (с 9:00 - 21:00 МСК)</p>
-                            <div class="google-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2180.1872172822946!2d60.50571731544358!3d56.877032912191936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c171d2669ab0a9%3A0x4a61dba8dc1b026f!2z0YPQuy4g0KDQsNGB0YLQvtGH0L3QsNGPLCAxNS80LCDQldC60LDRgtC10YDQuNC90LHRg9GA0LMsINCh0LLQtdGA0LTQu9C-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDYyMDA1MA!5e0!3m2!1sru!2sua!4v1579179829322!5m2!1sru!2sua"
-                                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="">
-                                </iframe>
+                            <div class="footer__row-mail">
+                                <a href="mailto:info@aroma-komfort.ru">
+                                    <p>info@aroma-komfort.ru</p>
+                                </a>
+                            </div>
+                            <div class="footer__siteName">
+                                <a href="/">Aroma-komfort.ru</a>
+                            </div>
+                            <div class="footer__privacyPolicy">
+                                <a href="#">Политика кониденциальности</a>
+                            </div>
+                            <div class="footer__img">
+                                <img src="img/main/footer/footer-baloon.png" alt="aroma-komfort">
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="footer-row__down">
-                    <div class="footer-signature">
-                        <p>2014-2019 Компания РАМФОРД</p>
                     </div>
                 </div>
             </div>
@@ -602,7 +354,6 @@
     </footer>
 
     <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
