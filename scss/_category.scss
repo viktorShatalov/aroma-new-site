@@ -88,6 +88,7 @@
     border: none;
     outline: none;
     border-radius: 2px;
+    cursor: pointer;
   }
 }
 #formSortBy {
@@ -101,23 +102,22 @@
     margin-left: 18px;
     color: $color_category-sidebar;
     appearance: none;
+    cursor: pointer;
   }
-  .select {
-    position: relative;
-    display: inline-block;
-  }
-  .select:after {
-    content: url(../img/shop/triangle.png);
-    padding: 15px 8px;
-    font-size: 1rem;
-    position: absolute;
-    right: 0;
-    top: 1px;
-    z-index: 1;
-    text-align: center;
-    width: 8%;
-    pointer-events: none;
-  }
+}
+.select {
+  position: relative;
+  display: inline-block;
+}
+.select::after {
+  content: url(../img/shop/triangle.png);
+  font-size: 1em;
+  position: absolute;
+  right: 15px;
+  top: 27px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 #cart {
   @include dspFlex;
