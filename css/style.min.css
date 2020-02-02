@@ -1997,7 +1997,9 @@ h2 {
           align-items: center;
 }
 
-.categoty-product__item .item-action .item-action__btn button {
+.categoty-product__item .item-action .item-action__btn a {
+  display: inline-block;
+  text-align: center;
   position: relative;
   font-size: 0.9em;
   background-color: rgba(255, 255, 255, 0);
@@ -2006,17 +2008,16 @@ h2 {
   border-radius: 5px;
   width: 166px;
   height: 36px;
-  outline: none;
-  cursor: pointer;
+  padding: 5px 0;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.categoty-product__item .item-action .item-action__btn button:hover {
+.categoty-product__item .item-action .item-action__btn a:hover {
   border: 2px solid rgba(69, 91, 205, 0.75);
 }
 
-.categoty-product__item .item-action .item-action__btn button::before {
+.categoty-product__item .item-action .item-action__btn a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2031,7 +2032,7 @@ h2 {
   height: 105%;
 }
 
-.categoty-product__item .item-action .item-action__btn button:hover::before {
+.categoty-product__item .item-action .item-action__btn a:hover::before {
   -webkit-animation: changeWidthBtnShop 0.5s forwards;
           animation: changeWidthBtnShop 0.5s forwards;
 }

@@ -193,7 +193,7 @@
     justify-content: space-between;
     align-items: center;
     .item-action__btn {
-      button {
+      a {
         @include shopBtn;
       }
     }
