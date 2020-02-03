@@ -224,6 +224,9 @@
     }
   }
 }
+.added_to_cart.wc-forward {
+  display: none !important;
+}
 #pagination {
   margin: 40px auto;
   .page-numbers {

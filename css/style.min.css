@@ -1755,6 +1755,66 @@ h2 {
           justify-content: flex-end;
 }
 
+#contacts {
+  margin: 55px 0 75px;
+}
+
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacts__content-left .left__title h1 {
+  font-size: 2.5em;
+  margin-bottom: 35px;
+}
+
+.contacts__content-left .title__description {
+  padding-bottom: 15px;
+}
+
+.contacts__content-left .title__description p {
+  font-size: 1.5em;
+  margin-bottom: 25px;
+  letter-spacing: -0.4px;
+  color: #2a2a2d;
+}
+
+.contacts__legalData {
+  padding: 40px 15px;
+  border-radius: 5px;
+  background-color: #4962dc;
+  width: 670px;
+}
+
+.contacts__legalData p {
+  font-size: 0.9em;
+  color: white;
+  letter-spacing: 0.3px;
+  line-height: 30px;
+}
+
+.contacts__content-right .info__left .left__title {
+  margin-bottom: 50px;
+}
+
+.contacts__content-right .info__left .left__title h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.contacts__content-right .info__left .left__title p {
+  font-size: 1.5em;
+}
+
+.contacts__content-right .info__left .left__title p span {
+  font-size: 1.563rem;
+  color: #919192;
+}
+
 .category__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2094,6 +2154,10 @@ h2 {
   font-size: 1.25em;
 }
 
+.added_to_cart.wc-forward {
+  display: none !important;
+}
+
 #pagination {
   margin: 40px auto;
 }
@@ -2154,7 +2218,7 @@ h2 {
   color: #131316;
 }
 
-.card-product__description p {
+.card-product__description p, .card-product__description a {
   color: #919192;
   font-size: 1.1em;
   line-height: 2;
@@ -2167,7 +2231,7 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-#cardProduct {
+#cardProduct .quantity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2177,7 +2241,11 @@ h2 {
           flex-direction: column;
 }
 
-#cardProduct input[type="number"] {
+#cardProduct .quantity .screen-reader-text {
+  display: none;
+}
+
+#cardProduct .quantity input[type="number"] {
   font-size: 0.7em;
   margin-bottom: 15px;
   width: 166px;
@@ -2188,7 +2256,7 @@ h2 {
   padding: 15px 10px;
 }
 
-#cardProduct input[type="submit"] {
+#cardProduct button {
   font-size: 1.25em;
   width: 270px;
   height: 54px;
@@ -2201,7 +2269,7 @@ h2 {
   transition: all 0.4s ease;
 }
 
-#cardProduct input[type="submit"]:hover {
+#cardProduct button:hover {
   background-color: rgba(248, 195, 77, 0.8);
 }
 

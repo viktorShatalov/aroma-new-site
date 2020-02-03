@@ -1,0 +1,54 @@
+#contacts {
+  margin: 55px 0 75px;
+}
+.contacts__content {
+  @include dspFlex;
+  justify-content: space-around;
+}
+.contacts__content-left {
+  .left__title {
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 35px;
+    }
+  }
+  .title__description {
+    padding-bottom: 15px;
+    p {
+      font-size: 1.5em;
+      margin-bottom: 25px;
+      letter-spacing: -0.4px;
+      color: rgba(42, 42, 45, 1);
+    }
+  }
+}
+.contacts__legalData {
+  padding: 40px 15px;
+  border-radius: 5px;
+  background-color: rgba(73, 98, 220, 1);
+  width: 670px;
+  p {
+    font-size: 0.9em;
+    color: $color_white;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+  }
+}
+.contacts__content-right {
+  .info__left {
+    .left__title {
+        margin-bottom: 50px;
+      h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 1.5em;
+        span {
+          font-size: 1.563rem;
+          color: rgba(145, 145, 146, 1);
+        }
+      }
+    }
+  }
+}

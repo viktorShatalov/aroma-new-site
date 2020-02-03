@@ -25,7 +25,7 @@ $color__btn_product: rgba(248, 195, 77, 1);
     font-size: 1.25em;
     color: $color__headeingPrice;
   }
-  p {
+  p,a {
     color: $color__grey;
     font-size: 1.1em;
     line-height: 2;
@@ -38,19 +38,24 @@ $color__btn_product: rgba(248, 195, 77, 1);
   }
 }
 #cardProduct {
-  @include dspFlex;
-  flex-direction: column;
-  input[type="number"] {
-    font-size: 0.7em;
-    margin-bottom: 15px;
-    width: 166px;
-    height: 36px;
-    border-width: 2px;
-    border-radius: 5px;
-    border: 2px solid rgba(69, 91, 205, 1);
-    padding: 15px 10px;
+  .quantity {
+    @include dspFlex;
+    flex-direction: column;
+    .screen-reader-text {
+      display: none;
+    }
+    input[type="number"] {
+      font-size: 0.7em;
+      margin-bottom: 15px;
+      width: 166px;
+      height: 36px;
+      border-width: 2px;
+      border-radius: 5px;
+      border: 2px solid rgba(69, 91, 205, 1);
+      padding: 15px 10px;
+    }
   }
-  input[type="submit"] {
+  button {
     font-size: 1.25em;
     width: 270px;
     height: 54px;
