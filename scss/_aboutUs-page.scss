@@ -1,0 +1,73 @@
+$color__this-text: rgba(121, 121, 122, 1);
+
+#aboutUs {
+  margin: 55px 0;
+}
+.aboutUs__content {
+  @include dspFlex;
+  justify-content: space-between;
+}
+.aboutUs__content-left {
+  margin-bottom: 75px;
+  .left__title {
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 35px;
+    }
+  }
+  .content-left__description {
+    padding-bottom: 15px;
+    width: 462px;
+    p {
+      font-size: 1.1em;
+      margin-bottom: 35px;
+      letter-spacing: -0.4px;
+      line-height: 1.318;
+      color: $color__this-text;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+.content-left__img {
+  width: 470px;
+  height: 220px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.aboutUs__content-right {
+  h3 {
+    letter-spacing: -0.3px;
+    margin: 40px 0 30px;
+  }
+  .right__description {
+    p {
+      font-size: 1.1em;
+      color: $color__this-text;
+      letter-spacing: -0.3px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.aboutUs__legalData {
+  padding: 40px 15px;
+  border-radius: 5px;
+  background-color: rgba(73, 98, 220, 1);
+  width: 670px;
+  p {
+    font-size: 0.9em;
+    color: $color_white;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+  }
+}
+.content-right__video {
+  video {
+    width: 670px;
+    height: 395px;
+    border-radius: 5px;
+  }
+}
