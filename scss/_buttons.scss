@@ -50,7 +50,7 @@
 @mixin button_before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 0%;
   height: 103%;
@@ -87,19 +87,18 @@
   }
 }
 
-// кнопка в категории ourSuccess для появления анимации при скроле
+// кнопка в блоке ourSuccess для появления анимации при скроле
 @mixin movie_btn {
   position: relative;
   border: 3px solid rgba(64, 84, 186, 100%);
   border-radius: 5px;
   width: 264px;
-  height: 41px;
+  height: 40px;
   background-color: #ffffff00;
   outline: none;
   &::before {
     @include button_before;
     background-color: rgba(64, 84, 186, 100%);
-    top: -1px;
     height: 105%;
     @include transition;
   }
@@ -121,6 +120,7 @@
   @include transition;
   &:hover {
     border: 2px solid rgba(69, 91, 205, .75);
+    color: $color_white;
   }
   &::before {
     @include button_before;

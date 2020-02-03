@@ -26,7 +26,7 @@
 }
 .sidebar-filtr {
   .filtr-items {
-    .filtr-item {
+    .cat-item {
       font-size: 0.8em;
       padding: 0 15px 30px;
       @include dspFlex;
@@ -122,6 +122,21 @@
 #cart {
   @include dspFlex;
   align-items: center;
+  position: relative;
+  .basket-btn__counter {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: 2px solid;
+    background-color: rgba(234, 194, 87, 1);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 2px 0;
+    color: rgba(86, 103, 229, 1);
+  }
   .cart__img {
     border-radius: 5px;
     background-color: rgb(234, 194, 87);
@@ -206,31 +221,15 @@
 }
 #pagination {
   margin: 40px auto;
-  ul {
+  .page-numbers {
     @include dspFlex;
     justify-content: center;
     align-items: center;
-    &::before,
-    &::after {
-      font-size: 1.75em;
-      font-weight: bold;
-      color: rgba(19, 19, 22, 100%);
-      margin: 0 16px 7px;
-      cursor: pointer;
-    }
-    &::before {
-      content: "<-";
-    }
-    &::after {
-      content: "->";
-    }
-    a {
+    a,
+    span {
       font-size: 1.5em;
       color: rgba(145, 145, 146, 100%);
       margin: 0 16px;
-      &.active {
-        color: rgba(19, 19, 22, 100%);
-      }
     }
   }
 }

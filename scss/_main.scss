@@ -560,15 +560,15 @@
 .movie__btn36 {
   button {
     @include movie_btn;
-    // &:hover::before {
-    //   width: 36%;
-    // }
+    &::before {
+      width: 36%;
+    }
   }
 }
 .movie__btn20 {
   button {
     @include movie_btn;
-    &:hover::before {
+    &::before {
       width: 20%;
     }
   }
@@ -576,7 +576,7 @@
 .movie__btn31 {
   button {
     @include movie_btn;
-    &:hover::before {
+    &::before {
       width: 31%;
     }
   }
@@ -584,15 +584,15 @@
 .movie__btn171 {
   button {
     @include movie_btn;
-    &:hover::before {
-      width: 101.5%;
+    &::before {
+      width: 100.5%;
     }
   }
 }
 .movie__btn65 {
   button {
     @include movie_btn;
-    &:hover::before {
+    &::before {
       width: 65%;
     }
   }
@@ -600,7 +600,7 @@
 .movie__btn38 {
   button {
     @include movie_btn;
-    &:hover::before {
+    &::before {
       width: 38%;
     }
   }
@@ -608,7 +608,7 @@
 .movie__btn28 {
   button {
     @include movie_btn;
-    &:hover::before {
+    &::before {
       width: 28%;
     }
   }
@@ -616,8 +616,8 @@
 .movie__btn23 {
   button {
     @include movie_btn;
-    &:hover::before {
-      width: 28%;
+    &::before {
+      width: 23%;
     }
   }
 }
@@ -802,6 +802,9 @@
         font-size: 1.3em;
         color: rgba(95, 95, 96, 100%);
       }
+    }
+    .text-center{
+      text-align: center;
     }
   }
 }
