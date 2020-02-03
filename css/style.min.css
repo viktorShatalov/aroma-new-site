@@ -2024,6 +2024,12 @@ h2 {
   transition: all 0.4s ease;
 }
 
+.categoty-product__item .item-description .tara {
+  font-size: 0.75em;
+  letter-spacing: 0.4px;
+  color: #919192;
+}
+
 .categoty-product__item .item-description p a {
   font-size: 0.75em;
   letter-spacing: 0.4px;
