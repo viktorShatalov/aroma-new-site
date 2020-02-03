@@ -100,6 +100,121 @@ h2 {
   font-size: 2.5em;
 }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  z-index: 10;
+  width: 825px;
+  max-width: 75%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-title h2 {
+  margin: 10px 0 40px;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 3em;
+  line-height: 20px;
+}
+
+.modal.active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.form-input__modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.form-input__modal input[type="tel"] {
+  border: 2px solid #5667e5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 365px;
+  padding: 18px 0 18px 35px;
+  margin-bottom: 11px;
+  font-size: 1.5em;
+  background-color: rgba(255, 255, 255, 0);
+  color: #666060;
+  outline: none;
+  padding: 17px 10px;
+  width: 100%;
+  max-width: 30%;
+}
+
+.form-input__modal input::-webkit-input-placeholder {
+  font-size: .8em;
+}
+
+.form-input__modal input:-ms-input-placeholder {
+  font-size: .8em;
+}
+
+.form-input__modal input::-ms-input-placeholder {
+  font-size: .8em;
+}
+
+.form-input__modal input::placeholder {
+  font-size: .8em;
+}
+
+.form-input__modal input[type="submit"] {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 54px;
+  width: 100%;
+  max-width: 32.5%;
+}
+
+.form-modal-description {
+  margin-bottom: 10px;
+}
+
+.form-modal-description p {
+  font-size: 0.65em;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 9;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .burger {
   display: none;
 }
