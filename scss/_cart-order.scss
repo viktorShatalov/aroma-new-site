@@ -59,12 +59,17 @@ $color__productName: rgba(95, 95, 96, 1);
   text-align: center;
 }
 .order-product__count {
-  input[type="text"] {
-    border: 2px solid rgba(69, 91, 205, 1);
-    width: 66px;
-    height: 58px;
-    text-align: center;
-    color: $color__titleNane;
+  .quantity {
+    input[type="number"] {
+      border: 2px solid rgba(69, 91, 205, 1);
+      width: 66px;
+      height: 58px;
+      text-align: center;
+      color: $color__titleNane;
+    }
+    .screen-reader-text {
+      display: none;
+    }
   }
 }
 .order-product__del {
@@ -72,21 +77,23 @@ $color__productName: rgba(95, 95, 96, 1);
   cursor: pointer;
   width: 145px;
   height: 55px;
-  span {
-    position: absolute;
-    top: 25px;
-    left: 0;
-    width: 55px;
-    border: 1px solid $color__del;
-    transform: rotate(-46deg);
-    &::after {
-      content: "";
+  a {
+    span {
       position: absolute;
-      top: 0;
+      top: 25px;
       left: 0;
-      width: 53px;
+      width: 55px;
       border: 1px solid $color__del;
-      transform: rotate(90deg);
+      transform: rotate(-46deg);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 53px;
+        border: 1px solid $color__del;
+        transform: rotate(90deg);
+      }
     }
   }
 }
@@ -121,7 +128,8 @@ $color__productName: rgba(95, 95, 96, 1);
     color: $color__productName;
     margin-right: 30px;
   }
-  input[type="submit"] {
+  a {
+    padding: 13px 0;
     border-radius: 8px;
     background-color: rgba(248, 195, 77, 1);
     width: 270px;

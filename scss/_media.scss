@@ -1,6 +1,7 @@
 // Tablet *******************************************************************************************
 @media (max-width: 767px) {
-  body {
+  body,
+  html {
     overflow-x: hidden;
     font-size: 16px;
   }
@@ -16,10 +17,11 @@
   .info__left h1 {
     font-size: 2.5em;
   }
-  body.lock {
+  body.lock,
+  html.lock {
     overflow: hidden;
   }
-  .header__content,
+  .header__top-row,
   .info__right,
   .topScents__row::before,
   .topScents__row::after,
@@ -27,7 +29,8 @@
   .ourWork__img,
   .footer__img,
   .item__right-description p br,
-  .footer__infoBlock {
+  .footer__infoBlock,
+  .modal-form__img {
     display: none;
   }
   .advatages-item,
@@ -38,18 +41,60 @@
   .footer__items {
     flex-wrap: wrap;
   }
+  .modal {
+    padding: 0;
+  }
+  .modal-title h2 {
+    margin: 25px 0;
+  }
   .header {
-    position: sticky;
+    position: fixed;
     width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-color: $color_white;
+  }
+  .header__content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $color_white;
+    top: 147px;
+    left: -100%;
+    z-index: 2;
+    margin: 0;
+    overflow: auto;
+    @include transition;
+  }
+  .header__content.active {
+    left: 0;
+  }
+  .header__down-row {
+    flex-direction: column;
+    .menu-items {
+      flex-direction: column;
+      margin: 10px auto;
+      li {
+        margin: 10px auto;
+        a {
+          font-size: 1.25em;
+        }
+      }
+    }
+  }
+  .header__btn button {
+    margin: 0 auto;
   }
   .header-row {
     margin: 0;
-    background-color: #fff;
-    padding: 60px 15px 0;
+    padding: 20px 15px;
   }
   .header__logo {
     @include dspFlex;
     justify-content: space-between;
+    width: 100%;
+    align-items: center;
     a {
       img {
         width: 142px;
@@ -65,7 +110,8 @@
     max-width: 100%;
   }
   .form-input__modal input[type="submit"] {
-    max-width: 100%;
+    width: 310px;
+    margin: 0 auto 11px;
   }
   .modal-title h2 {
     font-size: 2em;
@@ -77,29 +123,40 @@
   .form-modal-description p {
     font-size: 0.85em;
   }
-
+  .modal-body {
+    flex-direction: column-reverse;
+  }
+  .close-button {
+    top: 10px;
+    right: 3%;
+  }
+  .form-input__modal input[type="text"] {
+    width: 310px;
+    margin: 0 auto 11px;
+  }
+  .mobile__flex {
+    @include dspFlex;
+    justify-content: flex-end;
+  }
   //  Burger Menu *******************************************************************************************
   .mobile-menu {
     display: block;
     position: fixed;
     top: 64px;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: $color_white;
     color: $color_text_menu;
     @include transition;
   }
-  .mobile-menu.active {
-    left: 0;
-  }
   .burger {
     display: block;
     position: relative;
-    width: 30px;
+    width: 45px;
     height: 20px;
-    top: 25px;
-    left: 25%;
+    top: 0;
+    left: 0;
     z-index: 1;
   }
   .burger span {
@@ -143,10 +200,21 @@
     background-color: rgb(248, 195, 77);
     left: 50%;
     transform: translate(-50%, 0);
+    width: 310px;
   }
-
-  .info-block .conteiner {
-    padding: 20px 5px;
+  .equipment__btn {
+    width: 310px;
+    button {
+      width: 310px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+    }
+  }
+  .info-block {
+    margin-top: 150px;
+    .conteiner {
+      padding: 20px 5px;
+    }
   }
 
   .advatages .conteiner {
@@ -241,6 +309,7 @@
 
   #form input {
     margin: 0 auto 11px;
+    max-width: 310px;
   }
 
   .ourWork-item {
@@ -362,12 +431,88 @@
 
   // deliveryPage *************************************************************************************
 
+  .delivery__content-left {
+    flex: 1;
+    .left-description p {
+      width: 100%;
+    }
+  }
+  .delivery {
+    padding: 0 10px;
+  }
+  .delivery__content-right {
+    img {
+      width: 100%;
+      font-size: 1.1em;
+    }
+    .right-description {
+      p {
+        padding: 0 10px;
+      }
+      button {
+        width: 100%;
+        max-width: 170px;
+      }
+    }
+  }
   // category page ************************************************************************************
 
-  .category-row {
-    flex-wrap: wrap;
+  .category__row {
+    margin: 175px 0 0;
+    padding: 0 10px;
+    flex-direction: column;
   }
-
+  .category-left__sidebar {
+    margin: 0;
+  }
+  .sidebar-filtr .filtr-items .cat-item {
+    font-size: 1.5em;
+  }
+  .sortBy {
+    flex-direction: column;
+    height: auto;
+  }
+  #cart p {
+    display: block;
+  }
+  #formSearh {
+    padding: 30px 10px 20px;
+  }
+  #formSortBy {
+    padding: 0 10px 20px;
+    p {
+      text-align: left;
+      width: 110px;
+      letter-spacing: 0;
+    }
+  }
+  .select::after {
+    top: 13px;
+  }
+  #cart {
+    @include dspFlex;
+    padding: 0 10px 20px;
+    .cart__img a {
+      width: 100%;
+      height: 60px;
+    }
+  }
+  .categoty-product__item {
+    @include boxShadow_product;
+    margin: 3% auto;
+    .item-action {
+      flex-direction: column-reverse;
+      .item-price {
+        margin: 10px 0;
+      }
+      .item-action__btn a {
+        width: 280px;
+      }
+    }
+  }
+  .categoty-product__item .item-img img {
+    max-width: 100%;
+  }
   // cart-order page
   .cart-order__form-row {
     flex-wrap: wrap;

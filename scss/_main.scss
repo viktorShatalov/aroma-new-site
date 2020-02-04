@@ -236,6 +236,10 @@
     a {
       color: $color_link;
       letter-spacing: 1px;
+      @include transition;
+      &:hover {
+        opacity: 0.8;
+      }
     }
     &::after {
       content: "->";
@@ -472,13 +476,21 @@
 }
 
 /* section try */
+@keyframes showBlock {
+  100% {
+    transform: translateX(0%);
+  }
+}
 .try {
   background: url(../img/main/service-type/service-type-bg.jpg) no-repeat center;
   background-size: cover;
   padding: 80px 0;
   display: none;
-  @include transition;
+  animation: showBlock 1s forwards;
   transform: translateX(100%);
+}
+.try.active {
+  display: block;
 }
 .try__content {
   @include dspFlex;

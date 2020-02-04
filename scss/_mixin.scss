@@ -2,12 +2,10 @@
   display: flex;
 }
 @mixin transition {
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 @mixin transition-modal {
   transition: all 0.2s ease-in-out;
-}
-@mixin transform {
 }
 @mixin input {
   border: 2px solid $color_input-border;

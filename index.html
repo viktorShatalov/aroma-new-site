@@ -12,36 +12,38 @@
 </head>
 
 <body>
-    <!-- modal -->
-    <div class="modal" id="modal">
-        <div class="modal-header">
-            <button data-close-button class="close-button">&times;</button>
-            <div class="modal-title">
-                <h2>
-                    Перезвоним в течение 15 минут!
-                </h2>
-            </div>
-        </div>
-        <div class="modal-body">
-            <form action="post" class="modal-form">
-                <div class="form-input__modal">
-                    <input type="text" placeholder="Имя">
-                    <input type="tel" placeholder="Телефон">
-                    <input data-close-button value="Отправить">
-                </div>
-                <div class="form-modal-description">
-                    <p>
-                        Нажимая кнопку, Вы соглашаетесь c условиями
-                        <a href="#"> политики конфиденциальности.</a>
-                    </p>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div id="overlay"></div>
 
     <!-- header -->
     <header class="header">
+        <!-- modal -->
+        <div class="modal" id="modal">
+            <div class="modal-body">
+                <form action="post" class="modal-form">
+                    <div class="modal-title">
+                        <h2>
+                            Мы уверены в пользе!
+                        </h2>
+                        <p>
+                            Проверьте аромамаркетинг сами<br> 7 дней бесплатно
+                        </p>
+                    </div>
+                    <div class="form-input__modal">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Телефон">
+                        <input data-close-button type="submit" value="Попробовать ТЕСТ-ДРАЙВ">
+                    </div>
+                </form>
+                <img class="modal-form__img" src="img/main/modal/modal.png" alt="img">
+                <div class="mobile__flex">
+                    <div data-close-button class="close-button">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <img class="modal__bg" src="img/main/modal/modalBg.png">
+        </div>
+        <div id="overlay"></div>
+        <!-- modal -->
         <div class="conteiner">
             <div class="header-row">
                 <div class="header__logo">

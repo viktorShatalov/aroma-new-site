@@ -1,3 +1,5 @@
+$color_cart: rgba(248, 195, 77, 1);
+
 .category__row {
   @include dspFlex;
   flex-wrap: nowrap;
@@ -128,7 +130,7 @@
     right: 5px;
     top: 5px;
     border: 2px solid;
-    background-color: rgba(234, 194, 87, 1);
+    background-color: $color_cart;
     border-radius: 50%;
     width: 25px;
     height: 25px;
@@ -139,17 +141,20 @@
   }
   .cart__img {
     border-radius: 5px;
-    background-color: rgb(234, 194, 87);
+    background-color: $color_cart;
     width: 71px;
     height: 100%;
-    position: relative;
     cursor: pointer;
-    img {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      width: 40px;
-      height: 40px;
+    a {
+      display: block;
+      position: relative;
+      img {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   p {

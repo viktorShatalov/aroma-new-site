@@ -1,78 +1,121 @@
 // modal**************************************************
-.modal{
-    position: fixed;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(0);
-    background-color: $color_white;
-    border-radius: 10px;
-    padding: 25px;
-    z-index: 10;
-    width: 825px;
-    max-width: 75%;
-    @include transition-modal;
-}
-.modal-title{
-    h2{
-        margin: 10px 0 40px;
-    }
-}
-.close-button{
+.modal {
+  position: fixed;
+  padding: 75px 50px 50px 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 5px;
+  box-shadow: 0px 0px 59px 0px rgba(35, 19, 0, 0.58);
+  width: 100%;
+  max-width: 970px;
+  background-color: rgba(70, 91, 205, 1);
+  z-index: 6;
+  @include transition-modal;
+  .modal__bg {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    background:none;
-    border: none;
-    outline: none;
-    font-size: 3em;
-    line-height: 20px;
-}
-.modal.active{
-    transform: translate(-50%,-50%) scale(1);
-}
-.form-input__modal{
-    @include dspFlex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    input[type="tel"]{
-        @include input;
-        padding: 17px 10px;
-        width: 100%;
-        max-width: 30%;
-    }
-    input::placeholder{
-        font-size: .8em;
-    }
-    input[type="submit"]{
-        color: $color_white;
-        border: none;
-        border-radius: 5px;
-        height: 54px;
-        width: 100%;
-        max-width: 32.5%;
-    }
-}
-.form-modal-description{
-    margin-bottom: 10px;
-    p{
-        font-size: 0.65em;
-        
-    }
-}
-#overlay{
-    position: fixed;
-    opacity: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background-color: $color_box-shadow;
-    pointer-events: none;
-    z-index: 9;
-    @include transition-modal;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 }
-#overlay.active{
-    opacity: 1;
-    pointer-events: all;
+.modal-body {
+  @include dspFlex;
+  justify-content: space-between;
+  img {
+    width: 220px;
+    object-fit: cover;
+  }
+}
+.modal-title {
+  h2 {
+    font-size: 2em;
+    color: $color_white;
+    margin: 0 0 25px;
+    letter-spacing: 0.3px;
+  }
+  p {
+    font-size: 1.25em;
+    color: rgba(204, 204, 204, 1);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+  }
+}
+.close-button {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  z-index: 4;
+  top: -25px;
+  right: -20px;
+  cursor: pointer;
+  span {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 55px;
+    border: 1px solid $color_white;
+    transform: rotate(-46deg);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 53px;
+      border: 1px solid $color_white;
+      transform: rotate(90deg);
+    }
+  }
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.form-input__modal {
+  @include dspFlex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  input[type="text"] {
+    @include input;
+    padding: 17px 10px;
+    border: 2px solid $color_white;
+    border-radius: 5px;
+    width: 364px;
+    height: 69px;
+    z-index: 5;
+    color: rgba(204, 204, 204, 1);
+  }
+  input::placeholder {
+    font-size: 1em;
+    color: rgba(204, 204, 204, 1);
+   
+  }
+  input[type="submit"] {
+    background-color: rgb(248, 195, 77);
+    border: none;
+    border-radius: 5px;
+    height: 69px;
+    width: 364px;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    z-index: 5;
+  }
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $color_white;
+  pointer-events: none;
+  z-index: 5;
+  @include transition-modal;
+}
+#overlay.active {
+  opacity: 0.6;
+  pointer-events: all;
 }

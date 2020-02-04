@@ -58,7 +58,7 @@
   z-index: -1;
 }
 @mixin button_before_hover {
-  animation: changeWidthBtn 0.5s forwards;
+  animation: changeWidthBtn 150ms forwards;
 }
 
 // кнопка на главной в блоке ourSuccess
@@ -130,6 +130,6 @@
     height: 105%;
   }
   &:hover::before {
-    animation: changeWidthBtnShop 0.5s forwards;
+    animation: changeWidthBtnShop 150ms forwards;
   }
 }
