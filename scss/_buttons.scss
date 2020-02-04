@@ -14,7 +14,7 @@
 // анимация кнопки в категориях
 @keyframes changeWidthBtnShop {
   50% {
-    background-color: rgba(64, 84, 186, 1);
+    background-color: $color_bg-movie_btn;
   }
   100% {
     width: 100.5%;
@@ -51,7 +51,7 @@
   content: "";
   position: absolute;
   top: -1px;
-  left: 0;
+  left: -1px;
   width: 0%;
   height: 103%;
   background: $color_border-btn;
@@ -90,7 +90,7 @@
 // кнопка в блоке ourSuccess для появления анимации при скроле
 @mixin movie_btn {
   position: relative;
-  border: 3px solid rgba(64, 84, 186, 100%);
+  border: 3px solid $color_bg-movie_btn;
   border-radius: 5px;
   width: 264px;
   height: 40px;
@@ -98,7 +98,7 @@
   outline: none;
   &::before {
     @include button_before;
-    background-color: rgba(64, 84, 186, 100%);
+    background-color: $color_bg-movie_btn;
     height: 105%;
     @include transition;
   }
@@ -111,7 +111,7 @@
   position: relative;
   font-size: 0.9em;
   background-color: rgba(255, 255, 255, 0);
-  border: 2px solid rgba(69, 91, 205, 100%);
+  border: 2px solid $color_bg-movie_btn;
   color: $color_category-sidebar;
   border-radius: 5px;
   width: 166px;
@@ -119,13 +119,13 @@
   padding: 5px 0;
   @include transition;
   &:hover {
-    border: 2px solid rgba(69, 91, 205, .75);
+    border: 2px solid rgba(69, 91, 205, 0.75);
     color: $color_white;
   }
   &::before {
     @include button_before;
-    background-color: rgba(64, 84, 186, 100%);
-    background: rgba(64, 84, 186, 100%);
+    background-color: $color_bg-movie_btn;
+    background: $color_bg-movie_btn;
     top: -1px;
     height: 105%;
   }

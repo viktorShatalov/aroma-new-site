@@ -34,10 +34,7 @@
   align-items: center;
 }
 .header__logo {
-  .img {
-    @include dspFlex;
-    justify-content: center;
-    align-items: center;
+  img {
     width: 170px;
     height: 125px;
     background-color: $color_logo;

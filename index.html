@@ -27,7 +27,7 @@
                 <div class="form-input__modal">
                     <input type="text" placeholder="Имя">
                     <input type="tel" placeholder="Телефон">
-                    <input data-close-button type="submit" value="Отправить">
+                    <input data-close-button value="Отправить">
                 </div>
                 <div class="form-modal-description">
                     <p>
@@ -45,11 +45,8 @@
         <div class="conteiner">
             <div class="header-row">
                 <div class="header__logo">
-                    <!-- <img src="" alt="header-logo"> -->
                     <a href="#">
-                        <div class="img">
-                            <p>лого</p>
-                        </div>
+                        <img src="img/main/advantages/advantages-1.png" alt="#">
                     </a>
                     <div class="burger">
                         <span></span>
@@ -97,7 +94,7 @@
                             </ul>
                         </nav>
                         <div class="header__btn">
-                            <button>ТЕСТ-ДРАЙВ</button>
+                            <button data-modal-target="#modal">ТЕСТ-ДРАЙВ</button>
                         </div>
                     </div>
                 </div>
@@ -464,13 +461,14 @@
                 <div class="ourSuccess__content">
                     <div class="ourSuccess__title">
                         <h2>
-                            Успехи на ших клиентов
+                            Успехи наших клиентов
                         </h2>
                     </div>
                     <div class="ourSuccess__content-items">
                         <div class="ourSuccess__item">
                             <div class="item__img">
                                 <img src="img/main/ourSuccess/success1.png" alt="ourSuccess img">
+                                <img class="item__img-bg" src="img/main/ourSuccess/рамка.png" alt="img">
                             </div>
                             <div class="item__description">
                                 <div class="description-title">
@@ -528,11 +526,13 @@
                             </div>
                             <div class="item__img">
                                 <img src="img/main/ourSuccess/success2.png" alt="ourSuccess img">
+                                <img class="item__img-bg" src="img/main/ourSuccess/рамка.png" alt="img">
                             </div>
                         </div>
                         <div class="ourSuccess__item">
                             <div class="item__img">
                                 <img src="img/main/ourSuccess/success3.png" alt="ourSuccess img">
+                                <img class="item__img-bg" src="img/main/ourSuccess/рамка.png" alt="img">
                             </div>
                             <div class="item__description">
                                 <div class="description-title">
@@ -590,6 +590,7 @@
                             </div>
                             <div class="item__img">
                                 <img src="img/main/ourSuccess/success4.png" alt="ourSuccess img">
+                                <img class="item__img-bg" src="img/main/ourSuccess/рамка.png" alt="img">
                             </div>
                         </div>
                     </div>
@@ -773,17 +774,12 @@
                         </form>
                     </div>
                 </div>
-                <div class="info__right parallax">
-                    <img data-parallax-deep="270" class="img__item parallax-layer"
-                        src="img/main/first-screen/baloon-1.png" alt="baloon">
-                    <img data-parallax-deep="380" class="img__item parallax-layer"
-                        src="img/main/first-screen/baloon-2.png" alt="baloon">
-                    <img data-parallax-deep="300" class="img__item parallax-layer"
-                        src="img/main/first-screen/baloon-3.png" alt="baloon">
-                    <img data-parallax-deep="100" class="img__item parallax-layer"
-                        src="img/main/first-screen/baloon-4.png" alt="baloon">
-                    <img data-parallax-deep="110" class="img__item parallax-layer"
-                        src="img/main/first-screen/baloon-5.png" alt="baloon">
+                <div class="info__right">
+                    <img class="img__item" src="img/main/first-screen/baloon-1.png" alt="baloon">
+                    <img class="img__item" src="img/main/first-screen/baloon-2.png" alt="baloon">
+                    <img class="img__item" src="img/main/first-screen/baloon-3.png" alt="baloon">
+                    <img class="img__item" src="img/main/first-screen/baloon-4.png" alt="baloon">
+                    <img class="img__item" src="img/main/first-screen/baloon-5.png" alt="baloon">
                 </div>
             </div>
         </section>
@@ -831,53 +827,52 @@
                             </p>
                         </div>
                     </div>
-                    <div class="footer__item">
-                        <nav class="footer-menu">
-                            <ul class="menu-items">
-                                <li>
-                                    <a href="#">О Компании</a>
-                                </li>
-                                <li>
-                                    <a href="#">Наши Клиенты</a>
-                                </li>
-                                <li>
-                                    <a href="#">Доставка и оплата</a>
-                                </li>
-                                <li>
-                                    <a href="#">Условия соглашения</a>
-                                </li>
-                                <li>
-                                    <a href="#">Политика конф</a>
-                                </li>
-                                <li>
-                                    <a href="#">Каталог</a>
-                                </li>
-                                <li>
-                                    <a href="#">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="footer__item">
-                        <div class="footer__contact">
-                            <div class="footer__row-phone">
-                                <a href="tel:+7 (968) 712-15-45">
-                                    <p>+7 (968) 712-15-45</p>
-                                </a>
-                            </div>
-                            <div class="footer__row-mail">
-                                <a href="mailto:info@aroma-komfort.ru">
-                                    <p>info@aroma-komfort.ru</p>
-                                </a>
-                            </div>
-                            <div class="footer__siteName">
-                                <a href="/">Aroma-komfort.ru</a>
-                            </div>
-                            <div class="footer__privacyPolicy">
-                                <a href="#">Политика кониденциальности</a>
-                            </div>
-                            <div class="footer__img">
-                                <img src="img/main/footer/footer-baloon.png" alt="aroma-komfort">
+                    <div class="footer__flex">
+                        <div class="footer__item">
+                            <nav class="footer-menu">
+                                <ul class="menu-items">
+                                    <li>
+                                        <a href="#">О Компании</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Наши Клиенты</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Доставка и оплата</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Условия соглашения</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Каталог</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__contact">
+                                <div class="footer__row-phone">
+                                    <a href="tel:+7 (968) 712-15-45">
+                                        <p>+7 (968) 712-15-45</p>
+                                    </a>
+                                </div>
+                                <div class="footer__row-mail">
+                                    <a href="mailto:info@aroma-komfort.ru">
+                                        <p>info@aroma-komfort.ru</p>
+                                    </a>
+                                </div>
+                                <div class="footer__siteName">
+                                    <a href="/">Aroma-komfort.ru</a>
+                                </div>
+                                <div class="footer__privacyPolicy">
+                                    <a href="#">Политика кониденциальности</a>
+                                </div>
+                                <div class="footer__img">
+                                    <img src="img/main/footer/footer-baloon.png" alt="aroma-komfort">
+                                </div>
                             </div>
                         </div>
                     </div>

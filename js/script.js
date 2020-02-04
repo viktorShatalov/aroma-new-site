@@ -31,7 +31,7 @@ function modal() {
 
   closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-      const modal = button.closest('.remodal')
+      const modal = button.closest('.modal')
       closeModal(modal)
     })
   })

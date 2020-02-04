@@ -6,6 +6,9 @@
   @include dspFlex;
   color: $color_footer-text;
 }
+.footer__flex{
+  @include dspFlex;
+}
 .footer__items a {
   color: $color_footer-text;
 }
