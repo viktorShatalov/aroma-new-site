@@ -3336,9 +3336,11 @@ h2 {
   #cart .cart__img a .basket-btn__counter {
     right: 40%;
   }
-  .cart-order__form-row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .card-product__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.min.css.map */

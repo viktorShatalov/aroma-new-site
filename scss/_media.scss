@@ -529,9 +529,9 @@
     }
   }
 
-  // cart-order page
-  .cart-order__form-row {
-    flex-wrap: wrap;
+  // cart-product page
+  .card-product__item{
+    flex-direction: column;
   }
 }
 
