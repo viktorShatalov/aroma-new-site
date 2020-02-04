@@ -2279,7 +2279,7 @@ h2 {
   border-radius: 5px;
   width: 166px;
   height: 36px;
-  padding: 5px 0;
+  padding: 7px 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -3322,6 +3322,19 @@ h2 {
   }
   .categoty-product__item .item-img img {
     max-width: 100%;
+  }
+  .categoty-product__item .item-description h4 {
+    max-width: 100%;
+  }
+  #cart .cart__img {
+    margin: 0 0 0 4%;
+    width: 100%;
+  }
+  #cart .cart__img a img {
+    left: 40%;
+  }
+  #cart .cart__img a .basket-btn__counter {
+    right: 40%;
   }
   .cart-order__form-row {
     -ms-flex-wrap: wrap;

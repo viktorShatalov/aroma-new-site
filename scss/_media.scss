@@ -513,6 +513,22 @@
   .categoty-product__item .item-img img {
     max-width: 100%;
   }
+  .categoty-product__item .item-description h4 {
+    max-width: 100%;
+  }
+  #cart .cart__img {
+    margin: 0 0 0 4%;
+    width: 100%;
+    a {
+      img {
+        left: 40%;
+      }
+      .basket-btn__counter {
+        right: 40%;
+      }
+    }
+  }
+
   // cart-order page
   .cart-order__form-row {
     flex-wrap: wrap;
