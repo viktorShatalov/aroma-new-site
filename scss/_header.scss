@@ -1,5 +1,6 @@
 // mobile-menu
-.burger {
+.burger,
+.laptop_hiden {
   display: none;
 }
 // end mobile-menu
@@ -71,8 +72,12 @@
   a {
     @include dspFlex;
     color: #202020;
+    align-items: center;
     img {
       margin: 0 20px 0 0;
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
     }
   }
 }

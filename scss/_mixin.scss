@@ -48,3 +48,28 @@
     }
   }
 }
+@mixin fill-animation {
+  @keyframes fill {
+    0% {
+      transform: scaleX(0);
+    }
+
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+
+// delivery input
+
+@mixin deliveryInput {
+  border: 2px solid rgba(69, 91, 205, 1);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 366px;
+  height: 58px;
+  padding: 12px 25px;
+  font-size: 1.25em;
+  color: rgba(176, 176, 177, 1);
+  
+}

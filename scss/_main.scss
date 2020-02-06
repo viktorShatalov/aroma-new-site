@@ -574,70 +574,127 @@
   }
 }
 .movie__btn36 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 36%;
-    }
-  }
+  @include movie_btn;
 }
-.movie__btn20 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 20%;
-    }
-  }
-}
-.movie__btn31 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 31%;
-    }
-  }
-}
-.movie__btn171 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 101%;
-    }
-  }
-}
-.movie__btn65 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 65%;
-    }
-  }
-}
-.movie__btn38 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 38%;
-    }
-  }
-}
-.movie__btn28 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 28%;
-    }
-  }
-}
-.movie__btn23 {
-  button {
-    @include movie_btn;
-    &::before {
-      width: 23%;
-    }
-  }
+.movie__btn36--filled:before {
+  position: absolute;
+  content: " ";
+  width: 36%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
 }
 
+.movie__btn20 {
+  @include movie_btn;
+}
+.movie__btn20--filled:before {
+  position: absolute;
+  content: " ";
+  width: 20%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn31 {
+  @include movie_btn;
+}
+.movie__btn31--filled:before {
+  position: absolute;
+  content: " ";
+  width: 31%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn171 {
+  @include movie_btn;
+}
+.movie__btn171--filled:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn65 {
+  @include movie_btn;
+}
+.movie__btn65--filled:before {
+  position: absolute;
+  content: " ";
+  width: 65%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn38 {
+  @include movie_btn;
+}
+.movie__btn38--filled:before {
+  position: absolute;
+  content: " ";
+  width: 38%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn28 {
+  @include movie_btn;
+}
+.movie__btn28--filled:before {
+  position: absolute;
+  content: " ";
+  width: 28%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+.movie__btn23 {
+  @include movie_btn;
+}
+.movie__btn23--filled:before {
+  position: absolute;
+  content: " ";
+  width: 23%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  animation: fill 1.5s;
+}
+@include fill-animation;
 /* section ourWork */
 
 .ourWork {
@@ -819,7 +876,8 @@
 .equipment__btn {
   position: relative;
   bottom: -60px;
-  left: 34.5%;
+  left: 50%;
+  transform: translate(-50%, 0px);
   width: 365px;
   height: 72px;
   button {

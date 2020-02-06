@@ -17,3 +17,107 @@
 .text__right {
   justify-content: flex-end;
 }
+.duble-movie__btn36{
+  @include movie_btn;
+}
+.duble-movie__btn36:before {
+  position: absolute;
+  content: " ";
+  width: 36%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn20{
+  @include movie_btn;
+}
+.duble-movie__btn20:before {
+  position: absolute;
+  content: " ";
+  width: 20%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn31{
+  @include movie_btn;
+}
+.duble-movie__btn31:before {
+  position: absolute;
+  content: " ";
+  width: 31%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn171{
+  @include movie_btn;
+}
+.duble-movie__btn171:before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn65{
+  @include movie_btn;
+}
+.duble-movie__btn65:before {
+  position: absolute;
+  content: " ";
+  width: 65%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn38{
+  @include movie_btn;
+}
+.duble-movie__btn38:before {
+  position: absolute;
+  content: " ";
+  width: 38%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn28{
+  @include movie_btn;
+}
+.duble-movie__btn28:before {
+  position: absolute;
+  content: " ";
+  width: 28%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.duble-movie__btn23{
+  @include movie_btn;
+}
+.duble-movie__btn23:before {
+  position: absolute;
+  content: " ";
+  width: 23%;
+  height: 100%;
+  background: $color_bg-movie_btn;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}

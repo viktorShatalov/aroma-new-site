@@ -60,6 +60,8 @@ $color__productName: rgba(95, 95, 96, 1);
 }
 .order-product__count {
   .quantity {
+    @include dspFlex;
+    justify-content: center;
     input[type="number"] {
       border: 2px solid rgba(69, 91, 205, 1);
       width: 66px;
@@ -73,11 +75,12 @@ $color__productName: rgba(95, 95, 96, 1);
   }
 }
 .order-product__del {
-  position: relative;
-  cursor: pointer;
-  width: 145px;
-  height: 55px;
   a {
+    position: relative;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    display: block;
     span {
       position: absolute;
       top: 25px;

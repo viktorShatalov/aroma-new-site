@@ -9,46 +9,46 @@ jQuery(document).ready(function () {
 
 // modal
 
-// function modal() {
+function modal() {
 
-//   const openModalButtons = document.querySelectorAll('[data-modal-target]');
-//   const closeModalButtons = document.querySelectorAll('[data-close-button]');
-//   const overlay = document.getElementById('overlay');
+  const openModalButtons = document.querySelectorAll('[data-modal-target]');
+  const closeModalButtons = document.querySelectorAll('[data-close-button]');
+  const overlay = document.getElementById('overlay');
 
-//   openModalButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-//       const modal = document.querySelector(button.dataset.modalTarget)
-//       openModal(modal)
-//     })
-//   })
+  openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = document.querySelector(button.dataset.modalTarget)
+      openModal(modal)
+    })
+  })
 
-//   overlay.addEventListener('click', () => {
-//     const modals = document.querySelectorAll('.modal.active')
-//     modals.forEach(modal => {
-//       closeModal(modal)
-//     })
-//   })
+  overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+      closeModal(modal)
+    })
+  })
 
-//   closeModalButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-//       const modal = button.closest('.modal')
-//       closeModal(modal)
-//     })
-//   })
+  closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const modal = button.closest('.modal')
+      closeModal(modal)
+    })
+  })
 
-//   function openModal(modal) {
-//     if (modal == null) return
-//     modal.classList.add('active')
-//     overlay.classList.add('active')
-//   }
+  function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+  }
 
-//   function closeModal(modal) {
-//     if (modal == null) return
-//     modal.classList.remove('active')
-//     overlay.classList.remove('active')
-//   }
-// }
-// modal();
+  function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+  }
+}
+
 
 // paralax-effect
 
@@ -99,32 +99,87 @@ jQuery(document).ready(function () {
 })
 
 
-// анимация плашека на главной
-jQuery(window).scroll(function () {
-  if (jQuery(window).scrollTop() > 0) {
-    jQuery(".movie__btn36 button::before").css("width", "36%");
+// анимация плашка на главной
+
+window.onscroll = () => {
+  let scroll = window.pageYOffset || document.documentElement.scrollTop;
+  let btn36 = document.querySelector('.movie__btn36');
+  let btn20 = document.querySelector('.movie__btn20');
+  let btn31 = document.querySelector('.movie__btn31');
+  let btn171 = document.querySelector('.movie__btn171');
+  let btn65 = document.querySelector('.movie__btn65');
+  let btn38 = document.querySelector('.movie__btn38');
+  let btn28 = document.querySelector('.movie__btn28');
+  let btn23 = document.querySelector('.movie__btn23');
+
+  if (scroll > 4000) {
+    btn36.classList.add('movie__btn36--filled');
   }
-});
+  if (scroll > 4000) {
+    btn20.classList.add('movie__btn20--filled');
+  }
+  if (scroll > 4600) {
+    btn31.classList.add('movie__btn31--filled');
+  }
+  if (scroll > 4600) {
+    btn171.classList.add('movie__btn171--filled');
+  }
+  if (scroll > 5200) {
+    btn65.classList.add('movie__btn65--filled');
+  }
+  if (scroll > 5200) {
+    btn38.classList.add('movie__btn38--filled');
+  }
+  if (scroll > 5800) {
+    btn28.classList.add('movie__btn28--filled');
+  }
+  if (scroll > 5800) {
+    btn23.classList.add('movie__btn23--filled');
+  }
+}
 
 // спрятать-показать sidebar-menu в категориях
 
-// jQuery(document).ready(function () {
 
-//   jQuery('').click(function(){
-
-//   })
-// })
-if ($(window).width() > 768) {
+if (jQuery(window).width() > 480) {
   // Тут код для больших разрешений,
   //с шириной окна с сайтом больше 768 писелей
 } else {
   // Тут код для маленьких экранов
-  $(".cat-item").hide();
+  jQuery(".cat-item").hide();
 
-  $(".sidebar__title").click(
+  jQuery(".sidebar__title").click(
     function () {
-      $(".cat-item").toggle('slow')
+      jQuery(".cat-item").toggle('slow')
     }
   );
-  
 }
+
+// активная ссылка меню
+
+let btnContainer = document.querySelector(".menu-items");
+
+let btns = btnContainer.querySelector(".menu-items li");
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+// delivery-page
+jQuery(".payment_method_bacs,.item__hide").hide();
+
+jQuery(".payment_methods").click(
+  function () {
+    jQuery(".payment_method_bacs").toggle('slow')
+  }
+);
+
+jQuery("#shipping_method").click(
+  function () {
+    jQuery(".item__hide").toggle('slow')
+  }
+);
