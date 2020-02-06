@@ -523,7 +523,7 @@
 /* section ourSuccess */
 .ourSuccess__title {
   margin: 65px 0 0;
-  h2 {
+  h1 {
     margin: 0 0 60px;
   }
 }
@@ -548,8 +548,8 @@
   margin: 0 25px;
 }
 .description-title {
-  h3 {
-    font-size: 2em;
+  h2 {
+    font-size: 1.8em;
     color: rgba(95, 95, 96, 100%);
   }
 }
@@ -880,12 +880,14 @@
   transform: translate(-50%, 0px);
   width: 365px;
   height: 72px;
-  button {
-    @include button_link;
-    text-align: center;
-    width: 365px;
-    height: 72px;
-    font-size: 1.5em;
+  a {
+    button {
+      @include button_link;
+      text-align: center;
+      width: 365px;
+      height: 72px;
+      font-size: 1.5em;
+    }
   }
 }
 

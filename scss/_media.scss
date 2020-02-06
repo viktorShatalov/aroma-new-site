@@ -96,8 +96,12 @@
     width: 310px;
     margin: 0 auto 11px;
   }
-  .modal-title h2 {
-    font-size: 2em;
+  .modal-title {
+    text-align: center;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+    }
   }
   .modal-form__arthboard .form-input__modal .social {
     max-width: 100%;
@@ -370,7 +374,8 @@
       }
     }
   }
-  .category-sidebar, .sidebar-down{
+  .category-sidebar,
+  .sidebar-down {
     max-width: 100%;
   }
   .category-left__sidebar {
@@ -472,9 +477,6 @@
   .modal {
     padding: 0;
   }
-  .modal-title h2 {
-    margin: 25px 0;
-  }
   .form-input__modal input[type="tel"] {
     margin-bottom: 15px;
     width: 277px;
@@ -484,8 +486,13 @@
     width: 310px;
     margin: 0 auto 11px;
   }
-  .modal-title h2 {
-    font-size: 2em;
+  .modal-title {
+    text-align: center;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+      margin: 25px 0;
+    }
   }
   .modal-form__arthboard .form-input__modal .social {
     max-width: 100%;
@@ -505,7 +512,7 @@
     width: 310px;
     margin: 0 auto 11px;
   }
-  .modal-title p{
+  .modal-title p {
     text-align: center;
   }
 }
@@ -613,9 +620,6 @@
   .modal {
     padding: 0;
   }
-  .modal-title h2 {
-    margin: 25px 0;
-  }
   .form-input__modal input[type="tel"] {
     margin-bottom: 15px;
     width: 277px;
@@ -625,8 +629,13 @@
     width: 310px;
     margin: 0 auto 11px;
   }
-  .modal-title h2 {
-    font-size: 2em;
+  .modal-title {
+    text-align: center;
+    h2 {
+      font-size: 2em;
+      text-align: center;
+      margin: 25px 0;
+    }
   }
   .modal-form__arthboard .form-input__modal .social {
     max-width: 100%;
@@ -716,7 +725,6 @@
     width: 310px;
   }
   .equipment__btn {
-    width: 310px;
     button {
       width: 310px;
     }
@@ -876,19 +884,18 @@
   .equipment__item {
     margin: 140px auto 0px;
   }
-  .equipment__btn {
-    position: inherit;
-    margin: 30px auto 0;
-  }
 
-  .info-block__duble .conteiner {
-    padding: 0;
-    .info__left {
-      margin-top: 10px;
-      .left__title {
-        p {
-          span {
-            font-size: 0.8em;
+  .info-block__duble {
+    margin-top: 80px;
+    .conteiner {
+      padding: 0;
+      .info__left {
+        margin-top: 10px;
+        .left__title {
+          p {
+            span {
+              font-size: 0.8em;
+            }
           }
         }
       }

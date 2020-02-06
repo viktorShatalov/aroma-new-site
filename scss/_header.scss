@@ -64,6 +64,9 @@
         width: 100%;
       }
     }
+    a:not([href]){
+      width: 100%;
+    }
   }
 }
 .top__row-phone,

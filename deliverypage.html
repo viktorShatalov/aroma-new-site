@@ -47,7 +47,7 @@
                         <nav class="header-menu">
                             <ul class="menu-items">
                                 <li>
-                                    <a href="#">Главная</a>
+                                    <a class="active" href="#">Главная</a>
                                 </li>
                                 <li>
                                     <a href="#">Каталог</a>
@@ -80,59 +80,47 @@
         <!-- section ourWork -->
         <section class="delivery">
             <div class="conteiner">
-                <div class="delivery-page__item-top">
-                    <div class="shipping">
-                        <h3>
-                            Выберите способ доставки
-                        </h3>
-                        <ul id="shipping_method">
-                            <li>
-                                <label for="shipping_method_0_local_pickup1">
-                                    <!-- <input type="radio" name="shipping_method_0_local_pickup1"> -->
-                                    Доставка по МСК 300руб.
-                                </label>
-                            </li>
-                            <li class="item__hide">
-
-                                <label for="shipping_method_0_local_pickup2">
-                                    <!-- <input type="radio" name="shipping_method_0_local_pickup1" checked> -->
-                                    Самовывоз - бесплатно
-                                </label>
-                            </li>
-                            <li class="item__hide">
-                                <label for="shipping_method_0_local_pickup3">
-                                    <!-- <input type="radio" name="shipping_method_0_local_pickup1"> -->
-                                    Доставка за МКАД - 500руб.
-                                </label>
-                            </li>
-                        </ul>
-                        <div class="order-total">
-                            <p>
-                                <strong>
-                                    Всего:
-                                </strong>
-                            </p>
-                            <p>
-                                <strong>
-                                    <span class="woocommerce-Price-amount amount">1000
-                                        <span class="woocommerce-Price-currencySymbol">p</span></span>
-                                </strong>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="woocommerce-info">
-                        <h3>У вас есть купон?</h3>
-                        <form action="post" class="checkout_coupon">
-                            <input type="text" placeholder="Введите купон">
-                            <button type="submit" class="btn" value="Ввод">Ввод</button>
-                        </form>
-                        <p class="checked-coupon yes">Купон применён</p>
-                        <p class="checked-coupon no">Купон недействителен</p>
-                    </div>
-                </div>
-
-                <div class="delivery-page__item">
+                <div class="delivery-page__left">
                     <form action="" class="checkout">
+                        <div class="shipping">
+                            <h3>
+                                Выберите способ доставки
+                            </h3>
+                            <ul id="shipping_method">
+                                <li>
+                                    <label for="shipping_method_0_local_pickup1">
+                                        <!-- <input type="radio" name="shipping_method_0_local_pickup1"> -->
+                                        Доставка по МСК 300руб.
+                                    </label>
+                                </li>
+                                <li class="item__hide">
+
+                                    <label for="shipping_method_0_local_pickup2">
+                                        <!-- <input type="radio" name="shipping_method_0_local_pickup1" checked> -->
+                                        Самовывоз - бесплатно
+                                    </label>
+                                </li>
+                                <li class="item__hide">
+                                    <label for="shipping_method_0_local_pickup3">
+                                        <!-- <input type="radio" name="shipping_method_0_local_pickup1"> -->
+                                        Доставка за МКАД - 500руб.
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="order-total">
+                                <p>
+                                    <strong>
+                                        Всего:
+                                    </strong>
+                                </p>
+                                <p>
+                                    <strong>
+                                        <span class="woocommerce-Price-amount amount">1000
+                                            <span class="woocommerce-Price-currencySymbol">p</span></span>
+                                    </strong>
+                                </p>
+                            </div>
+                        </div>
                         <h3>Детали оплаты</h3>
                         <input type="text" name="name" id="" placeholder="Имя*">
                         <input type="tel" name="phone" id="" placeholder="Номер телефона*">
@@ -155,7 +143,19 @@
                         </ul>
                         <button name="woocommerce_checkout_place_order">Сделать заказ</button>
                     </form>
+                </div>
+
+                <div class="delivery-page__right">
                     <div class="delivery__elips">
+                        <div class="woocommerce-info">
+                            <h3>У вас есть купон?</h3>
+                            <form action="post" class="checkout_coupon">
+                                <input type="text" placeholder="Введите купон">
+                                <button type="submit" class="btn" value="Ввод">Ввод</button>
+                            </form>
+                            <p class="checked-coupon yes">Купон применён</p>
+                            <p class="checked-coupon no">Купон недействителен</p>
+                        </div>
                         <div class="elips"></div>
                         <img src="img/shop/delivery_baloon.png" alt="">
                     </div>
