@@ -157,27 +157,27 @@ if (jQuery(window).width() > 480) {
 
 // активная ссылка меню
 
-let btnContainer = document.querySelector(".menu-items");
+// let btnContainer = document.querySelector(".menu-items");
 
-let btns = btnContainer.querySelector(".menu-items li a");
+// let btns = btnContainer.querySelector(".menu-items li a");
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+// for (let i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function () {
+//     let current = document.getElementsByClassName("active");
+//     current[0].className = current[0].className.replace(" active", "");
+//     this.className += " active";
+//   });
+// }
 
-// try {
-//   var el = document.getElementById('msgText').getElementsByTagName('a');
-//   var url = document.location.href;
-//   for (var i = 0; i < el.length; i++) {
-//     if (url == el[i].href) {
-//       el[i].className += ' act';
-//     };
-//   };
-// } catch (e) { }
+try {
+  var el = document.querySelector('.menu-items li a');
+  var url = document.location.href;
+  for (var i = 0; i < el.length; i++) {
+    if (url == el[i].href) {
+      el[i].className += ' active';
+    };
+  };
+} catch (e) { }
 
 // delivery-page
 jQuery(".payment_method_bacs,.item__hide").hide();

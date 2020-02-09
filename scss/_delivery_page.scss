@@ -103,12 +103,14 @@ $color_text: rgba(121, 121, 122, 1);
 // оформление заказа ******************************************************************
 .delivery {
   .conteiner {
-    @include dspFlex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    h3 {
-      margin: 40px 0;
-      font-size: 1.5em;
+    .woocommerce {
+      @include dspFlex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      h3 {
+        margin: 40px 0;
+        font-size: 1.5em;
+      }
     }
   }
 }
@@ -124,7 +126,7 @@ $color_text: rgba(121, 121, 122, 1);
   input[type="email"],
   textarea {
     @include deliveryInput;
-    margin: 0 0 8px;
+    margin: 0 0 30px;
   }
   textarea {
     resize: none;
@@ -152,24 +154,19 @@ $color_text: rgba(121, 121, 122, 1);
     padding: 12px 25px;
     color: $color_white;
     position: relative;
-    &::after {
-      content: url("../img/shop/rectangle_Down.png");
-      position: absolute;
-      top: 14px;
-      right: 27px;
+    li {
+      margin: 0 0 20px;
     }
   }
   .payment_method_bacs {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: 12px 0 0;
     label {
       cursor: pointer;
-      margin: 12px 0;
       color: $color_white;
       text-align: left;
       width: 100%;
+      margin: 5px;
     }
   }
 }
@@ -187,33 +184,30 @@ $color_text: rgba(121, 121, 122, 1);
   bottom: 0;
   left: -50px;
 }
-.shipping {
-  #shipping_method {
-    border-radius: 4px;
-    background-color: rgb(69, 91, 205);
-    width: 366px;
-    height: 100%;
-    min-height: 48px;
-    color: $color_white;
-    font-size: 1.25em;
-    padding: 1px 25px;
-    position: relative;
-    &::after {
-      content: url("../img/shop/rectangle_Down.png");
-      position: absolute;
-      top: 22px;
-      right: 27px;
-    }
-    li {
-      margin: 20px 0;
-    }
+#shipping_method {
+  border-radius: 4px;
+  background-color: rgb(69, 91, 205);
+  width: 366px;
+  height: 100%;
+  min-height: 48px;
+  color: $color_white;
+  font-size: 1.25em;
+  padding: 1px 25px;
+  position: relative;
+  li {
+    margin: 20px 0;
     label {
       cursor: pointer;
     }
   }
 }
+
 .order-total {
+  font-size: 1.25em;
   margin: 50px 0;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
   p {
     font-size: 1.5em;
     margin-right: 15px;
@@ -238,14 +232,35 @@ $color_text: rgba(121, 121, 122, 1);
       right: 10%;
     }
   }
-  .checked-coupon {
+  .checked-coupon,
+  .woocommerce-message,
+  .woocommerce-error {
     font-size: 0.75em;
     line-height: 1.867;
   }
-  .yes {
+  .yes,
+  .woocommerce-message {
     color: rgb(117, 255, 169);
   }
-  .no {
+  .no,
+  .woocommerce-error {
     color: rgb(255, 117, 117);
   }
+}
+
+.checkout_coupon,
+.woocommerce-form-coupon {
+  display: block !important;
+}
+
+.shop_table .cart-subtotal,
+.shop_table tbody,
+.shop_table thead,
+.delivery .conteiner .col2-set label,
+.shop_table .cart-subtotal,
+.shop_table tbody,
+.shop_table thead,
+.delivery .conteiner .col2-set label,
+.payment_box p {
+  display: none;
 }

@@ -49,12 +49,19 @@
       color: #5e5e60;
       display: inline-block;
       letter-spacing: 0.65px;
+      &.active {
+        border-bottom: 1px solid #787879;
+      }
+      &.is-active,
+      &[aria-current="page"] {
+        border-bottom: 1px solid #787879;
+      }
       &::after {
         display: block;
         content: "";
         height: 1px;
         width: 0%;
-        margin: 5px 0 0;
+        margin: 5px 0 -1px;
         background-color: #787879;
         @include transition;
       }
@@ -63,9 +70,6 @@
       &:active {
         width: 100%;
       }
-    }
-    a:not([href]){
-      width: 100%;
     }
   }
 }

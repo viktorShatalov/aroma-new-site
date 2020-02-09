@@ -1225,4 +1225,45 @@
   .contacts__content-right .info__left .left__title p span {
     font-size: 1.125rem;
   }
+  .checkout input[type="text"],
+  .checkout input[type="tel"],
+  .checkout input[type="email"],
+  .checkout textarea,
+  .woocommerce-info .checkout_coupon input[type="text"] {
+    max-width: 300px;
+  }
+  .delivery .conteiner .woocommerce {
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+  }
+  .delivery__elips {
+    img,
+    .elips {
+      display: none;
+    }
+  }
+  .woocommerce-info .checkout_coupon button {
+    right: 0;
+  }
+  #shipping_method,
+  .checkout .payment_methods,
+  .checkout button {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .checkout .payment_methods {
+    margin-bottom: 30px;
+  }
+  #shipping_method li {
+    width: 300px;
+  }
+  .woocommerce-checkout-review-order-table {
+    margin: 0 auto;
+  }
+  .woocommerce-error {
+    .billing_address_1 {
+      color: red;
+    }
+  }
 }
